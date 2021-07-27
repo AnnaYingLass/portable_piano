@@ -13,6 +13,7 @@ body {
 }
 
 .piano {
+  width: 80%;
   display: flex;
   position: relative;
 }
@@ -26,12 +27,12 @@ body {
 .white {
   --width: 100px;
   background-color: white;
-/*  border: 1px solid #333;*/
-    border-top: 1px solid rgba(32,32,32,.2);
-    border-right: 1px solid rgba(32,32,32,.3);
-    border-bottom: 1px solid rgba(32,32,32,.3);
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 8px 1px rgba(32, 32, 32, 0.2);
+  border: 1px solid #333;
+  border-top: 1px solid rgba(32,32,32,.2);
+  border-right: 1px solid rgba(32,32,32,.3);
+  border-bottom: 1px solid rgba(32,32,32,.3);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 1px rgba(32, 32, 32, 0.2);
   
 }
 
