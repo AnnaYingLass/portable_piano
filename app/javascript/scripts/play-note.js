@@ -24,15 +24,29 @@ const playNotes = () => {
     })
   }
 
-}
+} 
 
 const playNote = (key) => {
+  // console.log(key.dataset)
   console.log('this key is pressed:', key.dataset.note)
-  const noteAudio = document.getElementById(key.dataset.note)
+  // getData(key.dataset.note)
+  // const noteAudio = document.getElementById(key.dataset.note)
   noteAudio.currentTime = 0
   noteAudio.play()
   key.classList.add('active')
   setTimeout(() => {  key.classList.remove('active'); }, 300);
 }
+
+// const getData = (note) => {
+//   console.log(`****************** ${note}`);
+//   if (note == 'C3') {
+//     console.log(`My first seed: ${@first.name}`);
+//   } else {
+//     console.log("deosnt work");
+//   }
+// }
+
+
+console.log()
 
 export { playNotes }
