@@ -15,8 +15,8 @@ const fetchChord = (number) => {
         audio.play()
         const key = document.querySelector(`[data-number="${note.number}"]`)
         key.classList.add('active')
-        setTimeout(() => { key.classList.remove('active'); }, 300)}
-      );
+        setTimeout(() => { key.classList.remove('active'); }, 300)
+      });
     })
 }
 
@@ -31,3 +31,5 @@ const playChord = () => {
 }
 
 playChord();
+
+
