@@ -1,6 +1,10 @@
 <!-- major_triad.html.erb -->
-<h1>Playing major triad....</h1>
+<h1>Please press a note~</h1>
 
+
+<%= render 'shared/piano' %>
+<%= javascript_pack_tag 'majorTriad', 'data-turbolinks-track': 'reload', defer: true %>
+<!-- =======
 <% @notes.each do |note| %>
   <%= "#{note.number}:   #{note.name} | " %>
 <% end %><br>
@@ -18,3 +22,4 @@
 
 <%= link_to "home", root_path %>
 
+ -->
