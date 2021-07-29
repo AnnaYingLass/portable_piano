@@ -1,14 +1,9 @@
 <!-- tritone.html.erb -->
-<h1>Playing tritone here...</h1>
-<% @notes.each do |note| %>
-  <%= "#{note.number}:   #{note.name} | " %>
-<% end %><br>
+<h1>Please press a note~</h1>
 
 
+<%= render 'shared/piano' %>
 
-<% @results.each do |note| %>
-  <%= "#{note.name}" %>
-<% end %><br>
 
 
 
