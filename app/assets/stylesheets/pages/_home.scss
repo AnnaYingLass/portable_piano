@@ -15,14 +15,20 @@ body {
   background-color: white;
   height: 75px;
   box-shadow: 0 3px 1px rgba(32, 32, 32, 0.1);
-  display: flex;
-  justify-content: space-around;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .logo {
 /*  background-color: red;*/
   width: 150px;
   height: 75px;
+}
+
+.my-logo {
+  margin-top: 15px;
+  width: 100%;
+  height: 80%;
 }
 
 .nav-bar {
@@ -76,7 +82,7 @@ li.login {
 
 .white {
   z-index: 1;
-  --width: 60px;
+  --width: 50px;
   background-color: white;
   border: 1px solid #333;
   border-top: 1px solid rgba(32,32,32,.2);
@@ -93,7 +99,7 @@ li.login {
 }
 
 .black {
-  --width: 35px;
+  --width: 29px;
   background-color: black;
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
