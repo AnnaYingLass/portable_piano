@@ -19,14 +19,15 @@ class HarmoniesController < ApplicationController
     @notes = Note.all
     @root = params[:number].to_i
     @results = [Note.find_by_number(@root), Note.find_by_number(@root + 4),Note.find_by_number(@root + 7)]
-
+    render json: @results
+  end
   # private
 
   def major_triad
-    @notes = Note.all
-    @root = params[:number].to_i
-    @results = [Note.find_by_number(@root), Note.find_by_number(@root + 4), Note.find_by_number(@root + 7)]
-    render json: @results
+    # @notes = Note.all
+    # @root = params[:number].to_i
+    # @results = [Note.find_by_number(@root), Note.find_by_number(@root + 4), Note.find_by_number(@root + 7)]
+
   end
 
   def tritone
