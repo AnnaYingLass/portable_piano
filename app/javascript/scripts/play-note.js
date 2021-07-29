@@ -1,12 +1,17 @@
 const WHITE_KEYS = ['q', 'w', 'e', 'r', 't', 'y', 'u','i', 'o', 'p', 'z', 'x', 'c', 'v', 'b']
 const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
 
-const playNotes = () => {
+// listens to the 'click' or 'keydown' and triggers the playNote function fot it
+ const playNotes = () => {
+  // keys are all the 24 keys (selected class = 'key')
   const keys = document.querySelectorAll('.key')
+  // whiteKeys are all the 14 whitekeys, similarly for black
   const whiteKeys = document.querySelectorAll('.key.white')
   const blackKeys = document.querySelectorAll('.key.black')
 
   if (keys.length) {
+    // for each one fo the 24 keys, add event listener of type 'click'
+    // and then triggers the playNote function on that key
     keys.forEach(key => {
       key.addEventListener('click', () => playNote(key))
     })
@@ -24,10 +29,12 @@ const playNotes = () => {
     })
   }
 
-} 
+}
 
+//plays the selected key with 300 ms
+// and sees if we are in an 'autosuggesting mode' using "window.location.pathname"
 const playNote = (key) => {
-  // console.log(key.dataset)
+  // prints something like: 'this key is pressed: C4'
   console.log('this key is pressed:', key.dataset.note)
   // getData(key.dataset.note)
   const noteAudio = document.getElementById(key.dataset.note)
@@ -35,16 +42,39 @@ const playNote = (key) => {
   noteAudio.play()
   key.classList.add('active')
   setTimeout(() => {  key.classList.remove('active'); }, 300);
+  // now see if the pathname has something there
+  console.log(window.location.pathname)
+  if (window.location.pathname == '/major_triad') {
+    fetchMajorTriad(key.dataset.number);
+  } else if (window.location.pathname == '/tritone') {
+    fetchTritone(key.dataset.number);
+  }
+
 }
 
-// const getData = (note) => {
-//   console.log(`****************** ${note}`);
-//   if (note == 'C3') {
-//     console.log(`My first seed: ${@first.name}`);
-//   } else {
-//     console.log("deosnt work");
-//   }
-// }
+const fetchMajorTriad = (number) => {
+  console.log(number)
+  // goes to  harmonies#construct_major_chord using this fetch method
+  const url = '/harmonies/construct_major_triad'
+  // my params[:number] gets triggered
+  fetch(`${url}?number=${number}`)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+}
+
+const fetchTritone = (number) => {
+  console.log(number)
+  // goes to  harmonies#construct_major_chord using this fetch method
+  const url = '/harmonies/construct_tritone'
+  // my params[:number] gets triggered
+  fetch(`${url}?number=${number}`)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+}
 
 
 export { playNotes }
