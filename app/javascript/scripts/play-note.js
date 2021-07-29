@@ -30,7 +30,7 @@ const playNote = (key) => {
   // console.log(key.dataset)
   console.log('this key is pressed:', key.dataset.note)
   // getData(key.dataset.note)
-  // const noteAudio = document.getElementById(key.dataset.note)
+  const noteAudio = document.getElementById(key.dataset.note)
   noteAudio.currentTime = 0
   noteAudio.play()
   key.classList.add('active')
@@ -46,7 +46,5 @@ const playNote = (key) => {
 //   }
 // }
 
-
-console.log()
 
 export { playNotes }
