@@ -1,0 +1,16 @@
+<h1>Playing a chord here...</h1>
+<% @notes.each do |note| %>
+  <%= "#{note.number}:   #{note.name} | " %>
+<% end %><br>
+
+
+
+<% @results.each do |note| %>
+  <%= "#{note.name}" %>
+<% end %><br>
+
+
+
+
+
+<%= link_to "home", root_path %>

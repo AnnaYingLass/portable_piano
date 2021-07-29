@@ -1,0 +1,19 @@
+<!-- major_triad.html.erb -->
+<h1>Playing major triad....</h1>
+
+<% @notes.each do |note| %>
+  <%= "#{note.number}:   #{note.name} | " %>
+<% end %><br>
+
+
+
+
+<% @results.each do |note| %>
+  <%= note.name %>
+<% end %>
+
+
+
+
+
+<%= link_to "home", root_path %>

@@ -1,31 +1,17 @@
-<h1>homeee</h1>
-  <%= link_to "major triad", major_triad_path %><br>
-  <%= link_to "tritone", tritone_path %>
+<div>This is the piano keyboard</div>
+<form action="/harmonies/chordify">
+  <input type="text" name="number"><br>
 
-<div class="banner">
-  <div class="logo">
-    <img src="/../../assets/images/logo.png">
-  </div>
+  <input type="checkbox"  name="chord_type" value="major_triad">
+  <label for="major_triad"> Major Triad</label><br>
 
-  <div class="nav-bar">
-      <ul class="nav-links">
-        <li>Piano</li>
-        <li>All harmonies</li>
-        <li>About us</li>
-      </ul>
+  <input type="checkbox" name="chord_type" value="tritone">
+  <label for="tritone"> Tritone</label><br>
+  <input type
 
-      <ul class="login-links">
-        <div class="pink-oval">
-          <li class="login">Create user</li>
-        </div>
-        <div class="pink-oval">
-          <li class="login">login</li>
-        </div>
-      </ul>
-  </div>
 
-</div>
 
+<!-- _piano_keyboard.html.erb -->
 <div class="piano">
     <div data-note="C3" class="key white"></div>
     <div data-note="Db3" class="key black"></div>
