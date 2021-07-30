@@ -1,4 +1,4 @@
-.navbar-lewagon {
+/*.navbar-lewagon {
   justify-content: space-between;
   background: white;
 }
@@ -9,4 +9,56 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}*/
+
+.banner {
+  background-color: white;
+  height: 75px;
+  box-shadow: 0 3px 1px rgba(32, 32, 32, 0.1);
+}
+
+.logo {
+  width: 150px;
+  height: 75px;
+}
+
+.my-logo {
+  margin-top: 10px;
+  width: 120%;
+  height: 80%;
+}
+
+.nav-bar {
+  display: block;
+  justify-content: space-between;
+  width: auto;
+  display: flex;
+}
+
+
+ul {
+  display: flex;
+
+}
+
+ul.login-links {
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  padding-top: 25px;
+  padding-left: 50px;
+  list-style: none;
+  color: #FFA2A2;
+}
+
+li.login {
+  color: white;
+  background-color: #FFA2A2;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px 15px 5px 15px;
+  align-content: center;
+  border-radius: 40px;
 }
