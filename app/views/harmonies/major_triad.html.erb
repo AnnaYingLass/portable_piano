@@ -1,12 +1,25 @@
 <!-- major_triad.html.erb -->
 <%= render 'shared/navbar' %>
 
+
 <h1>🦄Please press a note🦄</h1>
 
-<div class="keyboard">
-  <%= render 'shared/piano' %>
-  <a href="https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" style="color: #FFA2A2; text-decoration: none;" target="_blank">Prelude in C major, Bach</a>
+<div class="pieces">
+  <a href="https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" style="color: #FFA2A2; text-decoration: none;" target="_blank">Pelude in C major, Bach</a>
 </div>
+
+<div class="box">
+  <div class="vertical-bar">
+    <div>
+      <p class="head">Don't know what to play?</p>
+       <p class="head">Try our auto suggest:</p>
+    </div>
+    <%= render 'shared/vertical-choices' %>
+  </div>
+
+  <%= render 'shared/piano' %>
+</div>
+
 
 
 <%#= javascript_pack_tag 'majorTriad', 'data-turbolinks-track': 'reload', defer: true %>
