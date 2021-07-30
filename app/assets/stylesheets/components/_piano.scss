@@ -1,0 +1,68 @@
+.piano {
+  width: 750px;
+  display: flex;
+  position:absolute;
+  top: 15em;
+  left: 25em;
+  justify-content: center;
+
+}
+
+.key {
+  list-style:none;
+  position:relative;
+  float:left;
+  height: calc(var(--width) * 3.8);
+  width: var(--width);
+
+}
+
+.white {
+  z-index: 1;
+  --width: 50px;
+  background-color: white;
+  border: 1px solid #333;
+  border-top: 1px solid rgba(32,32,32,.2);
+  border-right: 1px solid rgba(32,32,32,.3);
+  border-bottom: 1px solid rgba(32,32,32,.3);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 1px rgba(32, 32, 32, 0.2);
+  
+}
+
+.white.active {
+  background-color: #CCC;
+  margin-top: 10px; 
+}
+
+.black {
+  --width: 29px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+}
+
+.black.active {
+  background-color: #333;
+  margin-top: 10px;
+}
+
+p.hei {
+  color: white;
+  margin-left: 10px;
+  margin-top: 75px;
+}
+
+p.bai {
+  color: grey;
+  margin-left: 20px;
+  margin-top: 155px;
+}
+
+
+
+
+
+

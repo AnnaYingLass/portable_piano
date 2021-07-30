@@ -1,9 +1,22 @@
 
 <%= render 'shared/navbar' %>
 
-<h1>homeee</h1>
+<div class="box">
+  <div class="vertical-bar">
+    <div>
+      <p class="head">Don't know what to play?</p>
+       <p class="head">Try our auto Suggest:</p>
+    </div>
 
-  <%= link_to "major triad", major_triad_path %><br>
-  <%= link_to "tritone", tritone_path %>
+    <div class="choice-btn">
+      <%= link_to "major triad", major_triad_path %><br>
+    </div>
 
-<%= render 'shared/piano' %>
+    <div class="choice-btn">
+      <%= link_to "tritone", tritone_path %>
+    </div>
+
+  </div>
+
+  <%= render 'shared/piano' %>
+</div>
