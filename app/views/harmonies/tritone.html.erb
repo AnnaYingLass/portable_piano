@@ -1,9 +1,21 @@
 <!-- tritone.html.erb -->
 <%= render 'shared/navbar' %>
 
-<h1>Please press a note~</h1>
 
-<a href="https://www.youtube.com/watch?v=KB59i99Wxc4&ab_channel=AshishXiangyiKumar" style="color: #FFA2A2; text-decoration: none;" target="_blank">Dante Sonata, Liszt</a>
+<h1>🦄Please press a note🦄</h1>
 
-<%= render 'shared/piano' %>
+<div class="pieces">
+  <a href="https://www.youtube.com/watch?v=KB59i99Wxc4&ab_channel=AshishXiangyiKumar" style="color: #FFA2A2; text-decoration: none;" target="_blank">Dante Sonata, Liszt</a>
+</div>
 
+<div class="box">
+  <div class="vertical-bar">
+    <div>
+      <p class="head">Don't know what to play?</p>
+       <p class="head">Try our auto suggest:</p>
+    </div>
+    <%= render 'shared/vertical-choices' %>
+  </div>
+
+  <%= render 'shared/piano' %>
+</div>
