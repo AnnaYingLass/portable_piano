@@ -1,0 +1,23 @@
+.vertical-bar {
+  margin-top: 10em;
+  margin-left: 5em;
+}
+
+.choices a {
+  text-decoration: none;
+  color: grey;
+  width: fit-content;
+  
+}
+
+.major-triad-btn {
+  padding-bottom: 1em;
+}
+
+.tritone-btn {
+  padding-bottom: 1em;
+}
+
+.major-triad-btn:hover ~ .box {
+  background-color: #FFA2A2;
+}

@@ -5,18 +5,10 @@
   <div class="vertical-bar">
     <div>
       <p class="head">Don't know what to play?</p>
-       <p class="head">Try our auto Suggest:</p>
+       <p class="head">Try our auto suggest:</p>
     </div>
-
-    <div class="choice-btn">
-      <%= link_to "major triad", major_triad_path %><br>
-    </div>
-
-    <div class="choice-btn">
-      <%= link_to "tritone", tritone_path %>
-    </div>
-
   </div>
 
+  <%= render 'shared/vertical-choices' %>
   <%= render 'shared/piano' %>
 </div>
