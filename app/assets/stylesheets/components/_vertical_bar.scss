@@ -1,6 +1,7 @@
 .vertical-bar {
-  margin-top: 10em;
-  margin-left: 5em;
+  // margin-top: 10em;
+  margin-top: 5em;
+  margin-left: 3em;
 }
 
 .choice-btn a {
@@ -10,18 +11,7 @@
   width: fit-content;
 }
 
-.title {
-  font-size: 20px;
-  color: black;
-  width: fit-content;
-}
-
-// .choice-btn :hover {
-//   color: red;
-//   background-color:black
-// }
 
 
-// 1. add event listsner on the button, hover
-// 2. select the background(<body>?) using query selector
-// 3. in the event listener, change the background-color of the element selected in step 2 to black
+
+
