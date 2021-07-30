@@ -61,6 +61,17 @@ const fetchMajorTriad = (number) => {
     .then(response => response.json())
     .then((data) => {
       console.log(data);
+
+        data.forEach(note => {
+        // console.log(note.name)
+          const audio = document.getElementById(note.name)
+          audio.currentTime = 0
+          audio.play()
+          const key = document.querySelector(`[data-number="${note.number}"]`)
+          key.classList.add('active')
+          setTimeout(() => { key.classList.remove('active'); }, 300)
+        });
+
     })
 }
 
@@ -73,6 +84,16 @@ const fetchTritone = (number) => {
     .then(response => response.json())
     .then((data) => {
       console.log(data);
+
+        data.forEach(note => {
+        // console.log(note.name)
+          const audio = document.getElementById(note.name)
+          audio.currentTime = 0
+          audio.play()
+          const key = document.querySelector(`[data-number="${note.number}"]`)
+          key.classList.add('active')
+          setTimeout(() => { key.classList.remove('active'); }, 300)
+        });
     })
 }
 

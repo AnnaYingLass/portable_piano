@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'major_triad', to: "harmonies#major_triad", as: 'major_triad'
   get 'tritone', to: "harmonies#tritone", as: 'tritone'
 
+
   # for ajax
   get 'harmonies/construct_major_triad', to: "harmonies#construct_major_triad"
   get 'harmonies/construct_tritone', to: "harmonies#construct_tritone"
