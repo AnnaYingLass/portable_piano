@@ -57,6 +57,7 @@ const fetchMajorTriad = (number) => {
   // goes to  harmonies#construct_major_chord using this fetch method
   const url = '/harmonies/construct_major_triad'
   // my params[:number] gets triggered
+
   fetch(`${url}?number=${number}`)
     .then(response => response.json())
     .then((data) => {
