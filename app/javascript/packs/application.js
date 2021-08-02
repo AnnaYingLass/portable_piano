@@ -28,12 +28,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { playNotes } from '../scripts/play-note.js'
-// import {  changeColor } from '../scripts/change-color.js'
+import {  changeColor } from '../scripts/change-color.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   playNotes();
-  // changeColor();
-  // popUp();
+  changeColor();
+  popUp();
 });
