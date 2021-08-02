@@ -1,34 +1,27 @@
-<!-- major_triad.html.erb -->
 <%= render 'shared/navbar' %>
 
+<div class='overall-container'>
+  <%= render 'shared/vertical_bar' %>
 
-<!-- <h1>🦄Please press a note🦄</h1> -->
-<h1>Please press a note~</h1>
+  <div class="box">
+    <div class="info">
+      <h1>🦄Please press a note~🦄</h1>
+    </div>
+    <%= render 'shared/piano' %>
+  </div>
 
-<div class="pieces">
-
-  <a href="https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" style="color: #FFA2A2; text-decoration: none;" target="_blank">Pelude in C major, Bach</a>
 </div>
+
+
+
+<!--
+<a href="https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" style="color: #FFA2A2; text-decoration: none;" target="_blank">Pelude in C major, Bach</a>
+
 
 <div class='prelude'>
   <%= image_tag 'prelude.png', alt: "logo", style: 'height:100%;width:auto;' %>
 </div>
-
-<!-- <div class="box">
-  <div class="vertical-bar">
-    <div>
-      <p class="head">Don't know what to play?</p>
-       <p class="head">Try our auto suggest:</p>
-    </div>
-    <%= render 'shared/vertical-choices' %>
-  </div> -->
+ -->
 
 
 
-<!-- </div> -->
-
- <%= render 'shared/piano' %>
-
-
-
-<%#= javascript_pack_tag 'majorTriad', 'data-turbolinks-track': 'reload', defer: true %>
