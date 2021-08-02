@@ -38,6 +38,9 @@ const playNote = (key) => {
   console.log('this key is pressed:', key.dataset.note)
   // noteAudio connects to the audio file stored in assets
   // e.g. <audio id="C3" src="<%= audio_url 'audios/1-C3.m4a'%>" type="audio/mpeg"></audio>
+
+  // console.log(noteAudio, "deallocate")
+  // if (noteAudio !== undefined) { noteAduio.remove() }
   const noteAudio = document.getElementById(key.dataset.note)
   noteAudio.currentTime = 0
   noteAudio.play()
@@ -67,6 +70,7 @@ const fetchMajorTriad = (number) => {
 
         data.forEach(note => {
         // console.log(note.name)
+          // if (note !== undefined) { note.remove() }
           const audio = document.getElementById(note.name)
           audio.currentTime = 0
           audio.play()
