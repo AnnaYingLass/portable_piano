@@ -9,9 +9,9 @@ const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
   const whiteKeys = document.querySelectorAll('.key.white')
   const blackKeys = document.querySelectorAll('.key.black')
 
+  // for each one fo the 24 keys, add event listener of type 'click'
+  // and then triggers the playNote function on that key
   if (keys.length) {
-    // for each one fo the 24 keys, add event listener of type 'click'
-    // and then triggers the playNote function on that key
     keys.forEach(key => {
       key.addEventListener('click', () => playNote(key))
     })
@@ -31,17 +31,19 @@ const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
 
 }
 
-//plays the selected key with 300 ms
-// and sees if we are in an 'autosuggesting mode' using "window.location.pathname"
+// play the selected key with 300 ms
+// and see if we are in an 'autosuggesting mode' using "window.location.pathname"
 const playNote = (key) => {
-  // prints something like: 'this key is pressed: C4'
+  // prints something like: 'this key is pressed: C3'
   console.log('this key is pressed:', key.dataset.note)
-  // getData(key.dataset.note)
+  // noteAudio connects to the audio file stored in assets
+  // e.g. <audio id="C3" src="<%= audio_url 'audios/1-C3.m4a'%>" type="audio/mpeg"></audio>
   const noteAudio = document.getElementById(key.dataset.note)
   noteAudio.currentTime = 0
   noteAudio.play()
   key.classList.add('active')
   setTimeout(() => {  key.classList.remove('active'); }, 300);
+
   // now see if the pathname has something there
   console.log(window.location.pathname)
   if (window.location.pathname == '/major_triad') {
