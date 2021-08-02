@@ -1,35 +1,33 @@
-<!-- major_triad.html.erb -->
-<div class="top-part">
-  <%= render 'shared/navbar' %>
+<!-- <div class="top-part"></div> -->
+<%= render 'shared/navbar' %>
 
-  <h1>🦄Press ONE random key🦄</h1>
-  
-  <div class="info-box">
-    <p class="p-info">The key you pressed is the <strong>root</strong>, and the two keys suggested to you are called a “<strong>major third</strong>” and a “<strong>perfect fifth</strong>”.</p>
-    <p class="p-info">Together, those three make up a <strong>major triad</strong>, it is one of the building blocks of tonal music in western pop, folk and rock music.</p>
-    <p class="p-info">It sounds <strong>constant and stable</strong>.</p>
-  </div>
+<div class='overall-container'>
+  <%= render 'shared/vertical_bar' %>
 
-  <div class="open-btn">
-    <button id="open">
-      See how this chord is used in a real composition
-    </button>
-  </div>
-
-  <div>
+  <div class="box">
+    <div class="info">
+      <h1>🦄Please press a note~🦄</h1>
+      <div class="open-btn">
+        <button id="open">See how this chord is used in a real composition</button>
+      </div>
+    </div>
     <%= render 'shared/piano' %>
   </div>
+
 </div>
 
 <div class="pop-up">
   <div id="videobox" class="videobox" >
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+     <%= image_tag 'prelude.png', alt: "logo", style: 'height:100%;width:auto;' %>
     <div class="pieces">
       <a href="https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" style="color: white; text-decoration: none;" target="_blank">Pelude in C major, Bach</a>
     </div>
     <button id="close">Close me</button>
   </div>
+    <%= javascript_pack_tag 'popup', 'data-turbolinks-track': 'reload', defer: true %>
 </div>
 
-  <%= javascript_pack_tag 'popup', 'data-turbolinks-track': 'reload', defer: true %>
-</div>
+
+
+

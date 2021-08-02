@@ -22,16 +22,3 @@ class HarmoniesController < ApplicationController
 
 end
 
-  # def chordify
-  #   @root = params[:number].to_i
-  #   @notes = Note.all
-
-  #   chord_type = params[:chord_type]
-  #   if chord_type == "major_triad"
-  #     major_triad
-  #   elsif chord_type == "tritone"
-  #     tritone
-  #   else
-  #     @results = ["This chord is not yet ready to be played"]
-  #   end
-  # end
