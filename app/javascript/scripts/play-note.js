@@ -60,15 +60,14 @@ const playNote = (key) => {
   setTimeout(() => { key.classList.remove('active') }, 300);
 }
 
-
 const dispatchChord = (number) => {
   console.log(window.location.pathname)
-  if (window.location.pathname == '/major_triad') {
-    // fetchMajorTriad(number);
-    jsMajorTriad(number);
-  } else if (window.location.pathname == '/tritone') {
-    // fetchTritone(number);
-    jsTritone(number);
+  let path = window.location.pathname;
+  switch(path){
+    case '/major_triad':
+     jsMajorTriad(number); break;
+    case '/tritone':
+      jsTritone(number); break;
   }
 }
 
@@ -85,8 +84,6 @@ const jsMajorTriad = (number) => {
 
 };
 
-
-
 const jsTritone = (number) => {
   const root = Number.parseInt(number);
   const tritone = [root, root+6];
@@ -98,7 +95,9 @@ const jsTritone = (number) => {
 
 export { playNotes }
 
-
+const firstInversion = (chords) => {
+  return []
+}
 // const fetchMajorTriad = (number) => {
 //   console.log(number)
 //   // goes to  harmonies#construct_major_chord using this fetch method
