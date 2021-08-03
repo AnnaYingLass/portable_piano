@@ -28,7 +28,7 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { playNotes } from '../scripts/play-note.js'
-import {  changeColor } from '../scripts/change-color.js'
+import {  changeColor } from '../scripts/changecolor.js'
 import {  popUp } from '../scripts/popup.js'
 
 document.addEventListener('turbolinks:load', () => {
@@ -38,6 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   // console.log({audios})
   // console.log('count audio', audios.length)
   playNotes();
-  // changeColor();
-  // popUp();
+  changeColor();
+  popUp();
 });
