@@ -29,11 +29,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { playNotes } from '../scripts/play-note.js'
 import {  changeColor } from '../scripts/change-color.js'
+import {  popUp } from '../scripts/popup.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const audios = document.querySelectorAll('audio')
+  // console.log({audios})
+  // console.log('count audio', audios.length)
   playNotes();
-  changeColor();
-  popUp();
+  // changeColor();
+  // popUp();
 });
