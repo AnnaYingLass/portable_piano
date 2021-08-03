@@ -7,7 +7,6 @@ body {
   background-color: #F9F9F9;
   margin: 0;
   transition: all 200ms;
-  will-change: background;
 }
 
 .clear {
@@ -22,7 +21,7 @@ body {
   width:750px; //same as piano
   height:500px;
   padding-top:5em;
-  // border: 1px solid yellow;
+  //border: 1px solid yellow;
 }
 
 .background-perfect {
@@ -41,7 +40,7 @@ body {
   background-color: #3a3a3a;
 }
 
-.text-white {  
+.text-white {
   a {
     color: white;
   }
