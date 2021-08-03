@@ -15,18 +15,6 @@ Rails.application.routes.draw do
   get 'major_7th', to: "harmonies#major_7th", as: 'major_7th'
   get 'perfect_8ve', to: "harmonies#perfect_8ve", as: 'perfect_8ve'
 
-
-
-
-
-
-
-
-
-
-
-
-
   get 'major_triad', to: "harmonies#major_triad", as: 'major_triad'
   get 'minor_triad', to: "harmonies#minor_triad", as: 'minor_triad'
   get 'diminished_triad', to: "harmonies#diminished_triad", as: 'diminished_triad'
