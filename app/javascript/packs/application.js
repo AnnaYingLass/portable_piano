@@ -30,6 +30,7 @@ import "bootstrap";
 import { playNotes } from '../scripts/play-note.js'
 import {  changeColor } from '../scripts/changecolor.js'
 import {  popUp } from '../scripts/popup.js'
+import {  displayInversion } from '../scripts/display-inversion.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -40,4 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   playNotes();
   changeColor();
   popUp();
+  displayInversion();
 });

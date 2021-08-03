@@ -9,6 +9,7 @@
 .home-btn a {
   text-decoration: none;
   font-size: 20px;
+  font-weight:bold;
   color: #4C4C6D;
   width: fit-content;
   transition: background 1000ms ease 0s;
@@ -23,8 +24,10 @@
 }
 
 .scroll-part {
+  border-top: 1px solid #F4F4F4;
+  border-bottom: 1px solid #F4F4F4;
   width: 200px;
-  height: 300px;
+  height: 400px;
   overflow-y: scroll;
 }
 
@@ -38,7 +41,5 @@
   scrollbar-width: none;
 }
 
-#home {
-  font-weight: bold;
-}
+
 
