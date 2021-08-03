@@ -70,27 +70,21 @@ const AUDIO_FILES = {
 
 // play the selected key(s)
 const playNote = (key) => {
-  // console.log(`${key.dataset.number}-${key.dataset.note}.m4a`)
-  // console.log("key.dataset", key.dataset);
-  // prints something like: 'this key is pressed: C3'
-  // console.log('this key is pressed:', key.dataset.note);
-
+  //console.log('this key is pressed:', key.dataset.note);
   // const noteAudio = document.getElementById(key.dataset.note);
-
-  // prints something like: <audio id="C3" src="http://localhost:3000/assets/audios/1-C3-35aa070….m4a" type="audio/mpeg"></audio>
-  // console.log("noteAudio:", noteAudio);
-  // current Time = 0 sets the 'restart' to the beginnning (t = 0s) of the file
-  // so if I press a key repeatedly very fast, I don't have to wait until the end of the file, but now starts again from beginning, like a normal piano
   const file = AUDIO_FILES[key.dataset.note]
   // console.log({file})
   const noteAudio = document.createElement('audio')
   noteAudio.src = file
   // console.log('audio src', noteAudio.src)
   noteAudio.type = "audio/mpeg"
+  // current Time = 0 sets the 'restart' to the beginnning (t = 0s) of the file
+  // so if I press a key repeatedly very fast, I don't have to wait until the end of the file
   noteAudio.currentTime = 0
   noteAudio.play();
   key.classList.add('active');
   const audios = document.querySelectorAll('audio')
+  //remove the media element this way, otherwise says 'blocked / reached limit'
   noteAudio.onended = () => {
         // noteAudio.currentSrc = null;
         noteAudio.src = "";
@@ -108,11 +102,34 @@ const dispatchChord = (number) => {
   // e,g, number is 1 if C3, but this number is a string!
   const root = Number.parseInt(number);
   switch(path){
-    //chords below
-    case '/major_triad': playChord(majorTriad(root)); break;
-    case '/minor_triad': playChord(minorTriad(root)); break;
-    case '/diminished_triad': playChord(diminishedTriad(root)); break;
-    case '/augmented_triad': playChord(augmentedTriad(root)); break;
+    //intervals
+    case '/minor_2nd': playChord(minor_2nd(root));break;
+    case '/major_2nd': playChord(major_2nd(root));break;
+    case '/minor_3rd': playChord(minor_3rd(root));break;
+    case '/major_3rd': playChord(major_3rd(root));break;
+    case '/perfect_4th': playChord(perfect_4th(root));break;
+    case '/augmented_4th': playChord(augmented_4th(root));break;
+    case '/perfect_5th': playChord(perfect_5th(root));break;
+    case '/minor_6th': playChord(minor_6th(root));break;
+    case '/major_6th': playChord(major_6th(root));break;
+    case '/minor_7th': playChord(minor_7th(root));break;
+    case '/major_7th': playChord(major_7th(root));break;
+    case '/perfect_8ve': playChord(perfect_8ve(root));break;
+    //chords
+    case '/major_triad':
+    playChord(majorTriad(root));
+    setTimeout(()=> {playChord(firstInversion(majorTriad(root)));}, 1000);
+    setTimeout(()=> { playChord(secondInversion(majorTriad(root)));}, 2000);
+    break;
+    case '/minor_triad':
+    playChord(minorTriad(root));
+    break;
+    case '/diminished_triad':
+    playChord(diminishedTriad(root));
+    break;
+    case '/augmented_triad':
+    playChord(augmentedTriad(root));
+    break;
     case '/tritone': playChord(tritone(root)); break;
   }
 }
@@ -125,12 +142,36 @@ const playChord = (array) => {
   })
 }
 
+//intervals
+const minor_2nd = (root) => [root, root+1];
+const major_2nd = (root) => [root, root+2];
+const minor_3rd = (root) => [root, root+3];
+const major_3rd = (root) => [root, root+4];
+const perfect_4th = (root) => [root, root+5];
+const augmented_4th = (root) => [root, root+6];
+const perfect_5th = (root) => [root, root+7];
+const minor_6th = (root) => [root, root+8];
+const major_6th = (root) => [root, root+9];
+const minor_7th = (root) => [root, root+10];
+const major_7th = (root) => [root, root+11];
+const perfect_8ve = (root) => [root, root+12];
+//chords
 const majorTriad = (root) =>  [root, root+4, root+7];
 const minorTriad = (root) =>  [root, root+3, root+7];
 const diminishedTriad = (root) =>  [root, root+4, root+6];
 const augmentedTriad = (root) => [root, root+4, root+8];
 const tritone = (root) => [root, root+6];
 
+//within a scale
+const firstInversion = (chord) => {
+    console.log("first inversion:",[chord[1],chord[2],chord[0]+12]);
+    return [chord[1],chord[2],chord[0]+12];
+}
+
+const secondInversion =  (chord) => {
+    console.log("second inversion:",[chord[2],chord[0]+12,chord[1]+12]);
+    return [chord[2],chord[0]+12, chord[1]+12];
+}
 
 
 export { playNotes }
