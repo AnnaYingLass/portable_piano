@@ -12,7 +12,7 @@
 
 .videobox {
   box-sizing: content-box;
-  background-color: #FFA2A2;
+  background-color: #F9DFDC;
   font-size: 15px;
   padding: 30px;
   border: 20px;
@@ -34,7 +34,8 @@ margin-top: 30px;
 }
 
 .pieces {
-  margin-bottom: 7px;
+  padding: 10px;
+
 }
 
 .vertical-bar {
@@ -51,8 +52,25 @@ margin-top: 30px;
   padding: 10px 25px;
 }
 
+#close:hover {
+  background-color: lightgrey;
+}
+
 .open-btn {
   text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#open {
+}
+
+#open:hover {
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  opacity: 0.9;
+  text-opacity: 1;
+  font-weight: 400;
+  border: 3px, solid, black;
 }
 
 .videobox.show {
