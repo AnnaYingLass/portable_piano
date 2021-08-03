@@ -1,6 +1,3 @@
-// 1. add event listsner on the button, hover
-// 2. select the background(<body>?) using query selector
-// 3. in the event listener, change the background-color of the element selected in step 2 to black
 const setColorPink = (body) => {
   body.classList.add("background-pink");
 }
@@ -31,4 +28,3 @@ const changeColor = () => {
 
 
 export { changeColor }
-

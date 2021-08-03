@@ -38,6 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   // console.log({audios})
   // console.log('count audio', audios.length)
   playNotes();
-  changeColor();
-  popUp();
+  // changeColor();
+  // popUp();
 });
