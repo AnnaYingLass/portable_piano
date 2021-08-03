@@ -4,8 +4,14 @@
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #F9F9F9;
   margin: 0;
+  transition: all 200ms;
+  will-change: background;
+}
+
+.clear {
+  clear: both;
 }
 
 .overall-container {
@@ -19,16 +25,24 @@ body {
   // border: 1px solid yellow;
 }
 
-.background-black {
-  background-color: black;
+.background-perfect {
+  background-color: #550006;
 }
 
-
-.background-pink {
-  background-color: pink;
+.background-major {
+  background-color: #c16100;
 }
 
+.background-minor {
+  background-color: #003a57;
+}
 
+.background-tritone {
+  background-color: #3a3a3a;
+}
 
-
-
+.text-white {  
+  a {
+    color: white;
+  }
+}

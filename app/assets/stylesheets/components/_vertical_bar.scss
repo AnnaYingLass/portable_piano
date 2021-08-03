@@ -2,20 +2,27 @@
   padding-top: 2em;
   padding-left: 3em;
   padding-right: 3em;
-
   width: 350px;
   font-size: 18px;
+}
+
+.home-btn a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #4C4C6D;
+  width: fit-content;
+  transition: background 1000ms ease 0s;
 }
 
 .choice-btn a {
   text-decoration: none;
   font-size: 20px;
-  color: grey;
+  color: #4C4C6D;
   width: fit-content;
+  transition: background 1000ms ease 0s;
 }
 
 .scroll-part {
-  background-color:#FAFAFA;
   width: 200px;
   height: 300px;
   overflow-y: scroll;
@@ -29,7 +36,4 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-
-
 

@@ -34,6 +34,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   playNotes();
-  changeColor();
-  popUp();
+  // changeColor();
+  // popUp();
 });
