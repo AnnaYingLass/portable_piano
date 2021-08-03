@@ -1,7 +1,7 @@
 console.log("changeColor")
 const changeSideBar = (color) => {
   const sideBar = document.querySelector(".scroll-part")
-  if (color === "white"){ 
+  if (color === "white"){
     sideBar.classList.add("text-white")
   } else {
     sideBar.classList.remove("text-white")
@@ -102,9 +102,11 @@ const changeColor = () => {
     tritone.addEventListener("mouseover", () => setColorTritone(body));
     tritone.addEventListener("mouseleave", () => removeColorTritone(body));
 
-    
+
   };
 }
+
+export { changeColor }
 
 // var one = "#870A30",
 //   two = "#FF5C4D",
@@ -124,14 +126,14 @@ const changeColor = () => {
 //    console.log("two")
 //    };
 //    if ($(bar).scrollTop() > $("#three").position().top) {
-   
+
 //    $('body').css('background', $("#three").attr("data-color"))
 //    };
 //    if ($(bar).scrollTop() > $("#four").position().top) {
-   
+
 //    $('body').css('background', $("#four").attr("data-color"))
 //    };
 //   });
 // }
 
-changeColor()
+
