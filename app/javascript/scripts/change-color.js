@@ -15,7 +15,7 @@ const removeColorBlack = (body) => {
 }
 
 const changeColor = () => {
-  console.log(`about to change color: ${window.location.pathname}`);
+  //console.log(`about to change color: ${window.location.pathname}`);
   if (window.location.pathname == '/'){
     const body = document.querySelector("body")
     const btn_triad = document.querySelector("#major_triad");
@@ -27,8 +27,6 @@ const changeColor = () => {
     btn_tritone.addEventListener("mouseleave", () => removeColorBlack(body));
   };
 }
-
-
 
 
 
