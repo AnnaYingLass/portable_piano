@@ -66,12 +66,11 @@ const dispatchChord = (number) => {
   // e,g, number is 1 if C3, but this number is a string!
   const root = Number.parseInt(number);
   switch(path){
-    case '/major_triad':
-      playChord(MajorTriad(root));
-    break;
-    case '/tritone':
-      playChord(Tritone(root));
-    break;
+    case '/major_triad': playChord(majorTriad(root)); break;
+    case '/minor_triad': playChord(minorTriad(root)); break;
+    case '/diminished_triad': playChord(diminishedTriad(root)); break;
+    case '/augmented_triad': playChord(augmentedTriad(root)); break;
+    case '/tritone': playChord(tritone(root)); break;
   }
 }
 
@@ -83,15 +82,12 @@ const playChord = (array) => {
   })
 }
 
-const MajorTriad = (root) => {
-  const majorTriad = [root, root+4, root+7];
-  return majorTriad;
-}
+const majorTriad = (root) =>  [root, root+4, root+7];
+const minorTriad = (root) =>  [root, root+3, root+7];
+const diminishedTriad = (root) =>  [root, root+4, root+6];
+const augmentedTriad = (root) => [root, root+4, root+8];
+const tritone = (root) => [root, root+6];
 
-const Tritone = (root) => {
-  const tritone = [root, root+6];
-  return tritone;
-};
 
 
 export { playNotes }
