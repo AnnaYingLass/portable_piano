@@ -63,41 +63,40 @@ const playNote = (key) => {
 const dispatchChord = (number) => {
   console.log(window.location.pathname)
   let path = window.location.pathname;
+  // e,g, number is 1 if C3, but this number is a string!
+  const root = Number.parseInt(number);
   switch(path){
-    case '/major_triad':
-     jsMajorTriad(number); break;
-    case '/tritone':
-      jsTritone(number); break;
+    case '/major_triad': playChord(majorTriad(root)); break;
+    case '/minor_triad': playChord(minorTriad(root)); break;
+    case '/diminished_triad': playChord(diminishedTriad(root)); break;
+    case '/augmented_triad': playChord(augmentedTriad(root)); break;
+    case '/tritone': playChord(tritone(root)); break;
   }
 }
 
-const jsMajorTriad = (number) => {
-  // e,g, number is 1 if C3, but this number is a string!
-  console.log("jsMajorTriad:", number);
-  const root = Number.parseInt(number);
-  const majorTriad = [root, root+4, root+7];
-  majorTriad.forEach(number => {
-    // this number is in the data-number attr of div key
+const playChord = (array) => {
+  array.forEach(number => {
+    // this number is in the data-number attribute of div "key"
     const key = document.querySelector(`[data-number="${number}"]`);
     playNote(key);
-  });
+  })
+}
 
-};
+const majorTriad = (root) =>  [root, root+4, root+7];
+const minorTriad = (root) =>  [root, root+3, root+7];
+const diminishedTriad = (root) =>  [root, root+4, root+6];
+const augmentedTriad = (root) => [root, root+4, root+8];
+const tritone = (root) => [root, root+6];
 
-const jsTritone = (number) => {
-  const root = Number.parseInt(number);
-  const tritone = [root, root+6];
-  tritone.forEach(number => {
-    const key = document.querySelector(`[data-number="${number}"]`);
-    playNote(key);
-  });
-};
+
 
 export { playNotes }
 
-const firstInversion = (chords) => {
-  return []
+const firstInversion = (chord) => {
+  return [];
 }
+
+
 // const fetchMajorTriad = (number) => {
 //   console.log(number)
 //   // goes to  harmonies#construct_major_chord using this fetch method
@@ -121,24 +120,4 @@ const firstInversion = (chords) => {
 //     })
 // }
 
-// const fetchTritone = (number) => {
-//   console.log(number)
-//   // goes to  harmonies#construct_major_chord using this fetch method
-//   const url = '/harmonies/construct_tritone'
-//   // my params[:number] gets triggered
-//   fetch(`${url}?number=${number}`)
-//     .then(response => response.json())
-//     .then((data) => {
-//       // console.log(data);
 
-//         data.forEach(note => {
-//           // console.log(note.name)
-//           const audio = document.getElementById(note.name)
-//           audio.currentTime = 0
-//           audio.play()
-//           const key = document.querySelector(`[data-number="${note.number}"]`)
-//           key.classList.add('active')
-//           setTimeout(() => { key.classList.remove('active'); }, 300)
-//         });
-//     })
-// }

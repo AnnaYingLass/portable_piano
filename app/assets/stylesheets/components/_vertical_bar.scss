@@ -14,20 +14,24 @@
   width: fit-content;
 }
 
-.scroll-part {
-  background-color:#FAFAFA;
-  width: 200px;
-  height: 300px;
-  overflow-y: scroll;
-}
+// .scroll-part {
+//   //background-color:#FAFAFA;
+//   width: 250px;
+//   height: 300px;
+//   overflow-y: scroll;
+// }
 
-.scroll-part::-webkit-scrollbar {
-    display: none;
-}
+// .scroll-part::-webkit-scrollbar {
+//     display: none;
+// }
 
-.scroll-part {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+// .scroll-part {
+//   -ms-overflow-style: none;
+//   scrollbar-width: none;
+// }
+
+#home {
+  font-weight: bold;
 }
 
 
