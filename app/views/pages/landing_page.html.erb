@@ -1,5 +1,17 @@
-<!-- landing_page.html.erb -->
-<h1>Landing page</h1>
+<%= render 'shared/navbar' %>
 
-<%= link_to "home", home_path %>
+<div class='landing-container'>
+	<div class="slogans">
+		<h1>Composer's</h1>
+		<h1>Portable Piano</h1>
+		<h3>Get inspired anytime, anywhere</h3>
+	    <button id="play-now">
+	      <%= link_to "Play Now", home_path %>
+	    </button>
+	</div>
+	<div class="poster-container">
+	 <%= image_tag 'dididi.png', alt: "logo", class: "poster"%>
+	</div>
+</div>
+
 

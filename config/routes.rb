@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-
   root to: 'pages#landing_page'
   get'home', to: 'pages#home', as: 'home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
 
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
+  get 'home', to: "pages#home", as: 'home'
   get 'minor_2nd', to: "harmonies#minor_2nd", as: 'minor_2nd'
   get 'major_2nd', to: "harmonies#major_2nd", as: 'major_2nd'
   get 'minor_3rd', to: "harmonies#minor_3rd", as: 'minor_3rd'
