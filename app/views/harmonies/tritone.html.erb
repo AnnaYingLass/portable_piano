@@ -6,16 +6,18 @@
   <div class="box">
     <div class="info">
       <h1>🦄 Please press a note~ 🦄</h1>
-      <div class="open-btn">
-        <button id="open">See usage in masterpiece</button>
-      </div>
+
+        <button type="button" class="modal-btn" data-toggle="modal" data-target="#exampleModal">
+          See usage in masterpiece
+        </button>
+
     </div>
     <%= render 'shared/piano' %>
   </div>
 
 </div>
 
-<div class="pop-up">
+<!-- <div class="pop-up">
   <div id="videobox" class="videobox" >
     <h2>All Tritones!</h2>
      <%= image_tag 'dante.png', alt: "logo", style: 'height:100%;width:auto;' %>
@@ -24,6 +26,11 @@
     </div>
     <button id="close">Close me</button>
   </div>
-</div>
+</div> -->
 
 
+<!-- Modal -->
+<% name = "All tritone!" %>
+<% link =  "https://www.youtube.com/watch?v=KB59i99Wxc4&ab_channel=AshishXiangyiKumar" %>
+<% image_path = "dante.png" %>
+<%= render 'shared/modal', name: name, link: link, image_path: image_path, piece: "Dante Sonata, Liszt" %>
