@@ -1,0 +1,20 @@
+.modal-content {
+  width: 1000px;
+}
+
+.modal-dialog {
+  margin-left: 200px;
+}
+
+.modal-btn {
+  border-radius: 10px;
+  border: 1px, solid, black !important;
+
+  &:hover {
+    background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
+    font-weight: 500;
+    border: 1px, solid, black !important;
+
+    // border: none;
+  }
+}
