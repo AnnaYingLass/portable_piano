@@ -6,14 +6,20 @@
   font-size: 18px;
 }
 
-.home-btn a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight:bold;
-  color: #4C4C6D;
-  width: fit-content;
-  transition: background 1000ms ease 0s;
+.home-btn {
+
+  a {
+    color: #2E294E;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:bold;
+    width: fit-content;
+    transition: background 1000ms ease 0s;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
 }
+
 
 .choice-btn a {
   text-decoration: none;
@@ -23,11 +29,16 @@
   transition: background 1000ms ease 0s;
 }
 
+.choice-btn {
+  padding-top: 20px;
+}
+
 .scroll-part {
-  border-top: 1px solid #F4F4F4;
-  border-bottom: 1px solid #F4F4F4;
+/*  border-top: 1px solid #F4F4F4;
+  border-bottom: 1px solid #F4F4F4;*/
+  margin-top: 40px;
   width: 200px;
-  height: 400px;
+  height: 600px;
   overflow-y: scroll;
 }
 
