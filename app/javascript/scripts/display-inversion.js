@@ -2,7 +2,7 @@
 
 const displayInversion = () => {
 
-  if (window.location.pathname == '/major_triad') {
+  if (window.location.pathname == '/major_triad' || '/minor_triad' || '/diminished_triad' || '/augmented_triad') {
 
   const WHITE_KEYS = ['q', 'w', 'e', 'r', 't', 'y', 'u','i', 'o', 'p', 'z', 'x', 'c', 'v', 'b']
   const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
