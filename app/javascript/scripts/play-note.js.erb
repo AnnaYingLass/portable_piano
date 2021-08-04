@@ -123,12 +123,18 @@ const dispatchChord = (number) => {
     break;
     case '/minor_triad':
     playChord(minorTriad(root));
+    setTimeout(()=> {playChord(firstInversion(minorTriad(root)));}, 1000);
+    setTimeout(()=> { playChord(secondInversion(minorTriad(root)));}, 2000);
     break;
     case '/diminished_triad':
     playChord(diminishedTriad(root));
+    setTimeout(()=> {playChord(firstInversion(diminishedTriad(root)));}, 1000);
+    setTimeout(()=> { playChord(secondInversion(diminishedTriad(root)));}, 2000);
     break;
     case '/augmented_triad':
     playChord(augmentedTriad(root));
+    setTimeout(()=> {playChord(firstInversion(augmentedTriad(root)));}, 1000);
+    setTimeout(()=> { playChord(secondInversion(augmentedTriad(root)));}, 2000);
     break;
     case '/tritone': playChord(tritone(root)); break;
   }
