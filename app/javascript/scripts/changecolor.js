@@ -62,6 +62,7 @@ const changeColor = () => {
     const diminished_triad = document.querySelector("#diminished_triad");
     const augmented_triad = document.querySelector("#augmented_triad");
     const tritone = document.querySelector("#tritone");
+    const dominant_7th_chord = document.querySelector("#dominant_7th_chord");
 
     minor_2nd.addEventListener("mouseover", () => setColorTritone(body));
     minor_2nd.addEventListener("mouseleave", () => removeColorTritone(body));
@@ -110,6 +111,11 @@ const changeColor = () => {
       chord.addEventListener("mouseover", () => setColorTritone(body));
       chord.addEventListener("mouseleave", () => removeColorTritone(body));
     });
+
+    dominant_7th_chord.addEventListener("mouseover", () => setColorPerfect(body));
+    dominant_7th_chord.addEventListener("mouseleave", () => removeColorPerfect(body));
+
+
 
     // tritone.addEventListener("mouseover", () => setColorTritone(body));
     // tritone.addEventListener("mouseleave", () => removeColorTritone(body));

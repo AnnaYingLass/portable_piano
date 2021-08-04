@@ -2,7 +2,7 @@
 const popUp = () => {
   if (window.location.pathname == '/major_triad' || window.location.pathname == '/minor_triad'
   || window.location.pathname == '/diminished_triad' || window.location.pathname == '/augmented_triad'
-  || window.location.pathname == '/tritone' )
+  || window.location.pathname == '/tritone' || window.location.pathname == '/dominant_7th_chord')
    {
     const open = document.getElementById('open');
     const videobox = document.getElementById('videobox');

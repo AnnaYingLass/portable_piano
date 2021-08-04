@@ -137,6 +137,10 @@ const dispatchChord = (number) => {
     setTimeout(()=> { playChord(secondInversion(augmentedTriad(root)));}, 2000);
     break;
     case '/tritone': playChord(tritone(root)); break;
+    case '/dominant_7th_chord':
+    playChord(dominant_7th_chord(root));
+    setTimeout(()=> {playChord(firstInversion_7th(dominant_7th_chord(root)));}, 1000);
+    break;
   }
 }
 
@@ -167,6 +171,7 @@ const minorTriad = (root) =>  [root, root+3, root+7];
 const diminishedTriad = (root) =>  [root, root+4, root+6];
 const augmentedTriad = (root) => [root, root+4, root+8];
 const tritone = (root) => [root, root+6];
+const dominant_7th_chord = (root) => [root, root+4, root+7, root+10];
 
 //within a scale
 const firstInversion = (chord) => {
@@ -178,6 +183,8 @@ const secondInversion =  (chord) => {
     console.log("second inversion:",[chord[2],chord[0]+12,chord[1]+12]);
     return [chord[2],chord[0]+12, chord[1]+12];
 }
+
+const firstInversion_7th = (chord) => [chord[1], chord[2], chord[3], chord[0]+12];
 
 
 export { playNotes }

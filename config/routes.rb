@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+
+  root to: 'pages#landing_page'
+  get'home', to: 'pages#home', as: 'home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
 
   get 'minor_2nd', to: "harmonies#minor_2nd", as: 'minor_2nd'
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   get 'diminished_triad', to: "harmonies#diminished_triad", as: 'diminished_triad'
   get 'augmented_triad', to: "harmonies#augmented_triad", as: 'augmented_triad'
   get 'tritone', to: "harmonies#tritone", as: 'tritone'
+  get 'dominant_7th_chord', to:"harmonies#dominant_7th_chord", as: 'dominant_7th_chord'
+
 
   # for ajax
   # get 'harmonies/construct_major_triad', to: "harmonies#construct_major_triad"
