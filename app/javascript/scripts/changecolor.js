@@ -43,7 +43,7 @@ const removeColorTritone = (body) => {
 
 const changeColor = () => {
   //console.log(`about to change color: ${window.location.pathname}`);
-  if (window.location.pathname == '/'){
+  if (window.location.pathname == '/home'){
     const body = document.querySelector("body")
     const minor_2nd = document.querySelector("#minor_2nd");
     const major_2nd = document.querySelector("#major_2nd");

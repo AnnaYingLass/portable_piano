@@ -1,11 +1,10 @@
 .piano {
-  width: 750px;
+  width: 950px;
   display: flex;
   position:absolute;
   top: 25em;
-  // left: 25em;
   justify-content: center;
-  // border: 3px solid purple;
+  border-radius: 10px;
 }
 
 .key {
@@ -19,14 +18,15 @@
 
 .white {
   z-index: 1;
-  --width: 50px;
+  --width: 80px;
   background-color: white;
   border: 1px solid #333;
   border-top: 1px solid rgba(32,32,32,.2);
   border-right: 1px solid rgba(32,32,32,.3);
   border-bottom: 1px solid rgba(32,32,32,.3);
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   box-shadow: 0 8px 1px rgba(32, 32, 32, 0.2);
+
 
 }
 
@@ -36,12 +36,12 @@
 }
 
 .black {
-  --width: 29px;
+  --width: 50px;
   background-color: black;
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
   z-index: 2;
-  border-radius: 0 0 8px 8px;
+  border-radius: 3px 3px 8px 8px;
 }
 
 .black.active {
@@ -51,14 +51,16 @@
 
 p.hei {
   color: white;
-  margin-left: 10px;
-  margin-top: 75px;
+  margin-left: 15px;
+  margin-top: 130px;
+  font-size: 20px;
 }
 
 p.bai {
   color: grey;
-  margin-left: 20px;
-  margin-top: 155px;
+  margin-left: 25px;
+  margin-top: 250px;
+  font-size: 20px;
 }
 
 
