@@ -53,6 +53,9 @@ class HarmoniesController < ApplicationController
   def tritone
   end
 
+  def dominant_7th_chord
+  end
+
 end
 
   # def construct_major_triad
