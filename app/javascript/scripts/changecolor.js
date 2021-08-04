@@ -1,4 +1,4 @@
-console.log("changeColor")
+//console.log("changeColor")
 const changeSideBar = (color) => {
   const sideBar = document.querySelector(".scroll-part")
   if (color === "white"){
@@ -42,7 +42,7 @@ const removeColorTritone = (body) => {
 }
 
 const changeColor = () => {
-  console.log(`about to change color: ${window.location.pathname}`);
+  //console.log(`about to change color: ${window.location.pathname}`);
   if (window.location.pathname == '/'){
     const body = document.querySelector("body")
     const minor_2nd = document.querySelector("#minor_2nd");
@@ -58,10 +58,13 @@ const changeColor = () => {
     const major_7th = document.querySelector("#major_7th");
     const perfect_8ve = document.querySelector("#perfect_8ve");
     const major_triad = document.querySelector("#major_triad");
+    const minor_triad = document.querySelector("#minor_triad");
+    const diminished_triad = document.querySelector("#diminished_triad");
+    const augmented_triad = document.querySelector("#augmented_triad");
     const tritone = document.querySelector("#tritone");
 
-    minor_2nd.addEventListener("mouseover", () => setColorMinor(body));
-    minor_2nd.addEventListener("mouseleave", () => removeColorMinor(body));
+    minor_2nd.addEventListener("mouseover", () => setColorTritone(body));
+    minor_2nd.addEventListener("mouseleave", () => removeColorTritone(body));
 
     major_2nd.addEventListener("mouseover", () => setColorMajor(body));
     major_2nd.addEventListener("mouseleave", () => removeColorMajor(body));
@@ -96,12 +99,20 @@ const changeColor = () => {
     perfect_8ve.addEventListener("mouseover", () => setColorPerfect(body));
     perfect_8ve.addEventListener("mouseleave", () => removeColorPerfect(body));
 
+    // chords below
     major_triad.addEventListener("mouseover", () => setColorMajor(body));
     major_triad.addEventListener("mouseleave", () => removeColorMajor(body));
 
-    tritone.addEventListener("mouseover", () => setColorTritone(body));
-    tritone.addEventListener("mouseleave", () => removeColorTritone(body));
+    minor_triad.addEventListener("mouseover", () => setColorMinor(body));
+    minor_triad.addEventListener("mouseleave", () => removeColorMinor(body));
 
+    [diminished_triad, augmented_triad, tritone].forEach((chord)=> {
+      chord.addEventListener("mouseover", () => setColorTritone(body));
+      chord.addEventListener("mouseleave", () => removeColorTritone(body));
+    });
+
+    // tritone.addEventListener("mouseover", () => setColorTritone(body));
+    // tritone.addEventListener("mouseleave", () => removeColorTritone(body));
 
   };
 }
@@ -112,6 +123,7 @@ export { changeColor }
 //   two = "#FF5C4D",
 //   three = "#000C66",
 //   four = "#050A30";
+
 
 // var bar = document.getElementsByClassName("vertical-bar");
 
