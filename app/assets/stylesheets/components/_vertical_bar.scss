@@ -6,20 +6,42 @@
   font-size: 18px;
 }
 
-.home-btn {
+// .home-btn {
 
+//   a {
+//     color: #2E294E;
+//     text-decoration: none;
+//     font-size: 20px;
+//     font-weight:bold;
+//     width: fit-content;
+//     transition: background 1000ms ease 0s;
+//     margin-left: 20px;
+//     margin-top: 50px;
+//   }
+// }
+
+#home {
+  font-size: 20px;
+/*  margin-left: 50px;*/
+  margin-top: 30px;
+  background-color: #FFA2A2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px;
   a {
-    color: #2E294E;
     text-decoration: none;
-    font-size: 20px;
-    font-weight:bold;
-    width: fit-content;
-    transition: background 1000ms ease 0s;
-    margin-left: 20px;
-    margin-top: 50px;
+    color: white;
   }
 }
 
+#home:hover {
+  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
+  a {
+    color: #4C4C6D;
+    font-weight: 500;
+  }
+}
 
 .choice-btn a {
   text-decoration: none;
