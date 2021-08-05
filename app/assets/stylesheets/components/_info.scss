@@ -1,5 +1,33 @@
 .info {
   text-align: center;
   color:grey;
-  //border: 1px solid grey;
+  display:  flex;
+  width: 85%;
+  justify-content: space-around;
+}
+
+.left-box {
+  background-color: #362E65;
+  color: #CDC5C5;
+  height: 230px;
+  flex-grow: 1;
+  margin-right: 30px;
+  border-radius: 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-box {
+  font-size: 15px;
+  color: white;
+  background-color: #C60F7B;
+  height: 230px;
+  flex-grow: 3;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
