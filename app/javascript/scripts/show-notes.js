@@ -1,0 +1,35 @@
+const showNotes = () => {
+
+  const WHITE_KEYS = ['q', 'w', 'e', 'r', 't', 'y', 'u','i', 'o', 'p', 'z', 'x', 'c', 'v', 'b']
+  const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
+
+  const display = document.querySelector('.display-inversion')
+  const keys = document.querySelectorAll('.key')
+  const whiteKeys = document.querySelectorAll('.key.white')
+  const blackKeys = document.querySelectorAll('.key.black')
+  // add event listener of type 'click' for each one fo the 24 keys
+  // and then triggers the playNote function on that key
+
+    if (keys.length) {
+      keys.forEach(key => {
+        key.addEventListener('click', ( ) => {
+          console.log("display inversion NOW:", display);
+          display.insertAdjacentHTML('beforeend', '<div class="position">root position</div>');
+          setTimeout(()=> {
+            display.insertAdjacentHTML('beforeend', '<div class="position">1st inversion</div>');
+          }, 1000);
+          setTimeout(()=> {
+            display.insertAdjacentHTML('beforeend', '<div class="position">2nd inversion</div>');
+          }, 2000);
+          setTimeout(()=> {
+            const divs = document.querySelectorAll('.position')
+            divs.forEach((div)=> div.remove());
+          }, 3000);
+        })
+
+      })
+    }
+  }
+
+
+export { displayInversion }

@@ -2,9 +2,15 @@
   <%= render 'shared/vertical_bar' %>
   <div class="box">
     <div class="info">
-      <div class="left-box">Strike a key to <br>
-        see how a major triad <br>
-        is contructed👇
+      <div class="left-box">
+        <div class="words">
+          Strike a key to <br>
+          see how a major triad <br>
+          is contructed👇
+        </div>
+        <div class="show-notes">
+          C d#
+        </div>
       </div>
       <div class="right-box">
         <div>
@@ -23,9 +29,13 @@
 
 
 
+
 <!-- Modal -->
-<% name = "Dominant 7th Chord: Third Bar!" %>
-<% link =  "https://www.youtube.com/watch?v=KB59i99Wxc4&ab_channel=AshishXiangyiKumar" %>
+
+<% name = "Dominant 7th!" %>
+<% link =  "https://www.youtube.com/watch?v=Ugc5FZsycAw&t=3701s&ab_channel=FelicesCantusBach" %>
 <% image_path = "prelude.png" %>
-<% piece = "See Sir Andras Schiff play Prelude in C Major, Bach" %>
-<%= render 'shared/modal', name: name, link: link, image_path: image_path, piece: piece %>
+<% image_width = "800px" %>
+<% piece = "Pelude in C major, Bach" %>
+<%= render 'shared/modal', name: name, link: link, image_path: image_path, piece: piece, image_width: image_width %>
+

@@ -2,9 +2,15 @@
   <%= render 'shared/vertical_bar' %>
   <div class="box">
     <div class="info">
-      <div class="left-box">Strike a key to <br>
-        see how a major triad <br>
-        is contructed👇
+      <div class="left-box">
+        <div class="words">
+          Strike a key to <br>
+          see how a major triad <br>
+          is contructed👇
+        </div>
+        <div class="show-notes">
+          C d#
+        </div>
       </div>
       <div class="right-box">
         <div>
@@ -26,5 +32,6 @@
 <% name = "All tritones!" %>
 <% link =  "https://www.youtube.com/watch?v=KB59i99Wxc4&ab_channel=AshishXiangyiKumar" %>
 <% image_path = "dante.png" %>
-<% piece = "See Mikhail Pletnev play Dante Sonata, Listz" %>
-<%= render 'shared/modal', name: name, link: link, image_path: image_path, piece: piece %>
+<% image_width = "auto" %>
+<%= render 'shared/modal', name: name, link: link, image_path: image_path, piece: "See Mikhail Pletnev play Dante Sonata, Listz", image_width: image_width %>
+
