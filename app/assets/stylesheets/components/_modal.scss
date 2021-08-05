@@ -1,5 +1,6 @@
 .modal-content {
   width: 1000px;
+  border-radius: 20px;
 }
 
 .modal-dialog {
@@ -8,13 +9,13 @@
 
 .modal-btn {
   border-radius: 10px;
-  border: 1px, solid, black !important;
+  border: none !important;
+  padding: 5px 10px 5px 10px;
+  background-color: #E1DCD9;
+  color: #211231;
 
   &:hover {
     background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
     font-weight: 500;
-    border: 1px, solid, black !important;
-
-    // border: none;
   }
 }

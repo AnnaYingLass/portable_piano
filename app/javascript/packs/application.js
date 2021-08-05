@@ -40,6 +40,6 @@ document.addEventListener('turbolinks:load', () => {
   // console.log('count audio', audios.length)
   playNotes();
   changeColor();
-  popUp();
+  // popUp();
   displayInversion();
 });

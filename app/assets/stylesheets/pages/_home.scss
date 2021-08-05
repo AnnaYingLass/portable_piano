@@ -14,10 +14,18 @@ body {
 }
 
 .box {
-  width:750px; //same as piano
+  width:100%; //same as piano
   height:500px;
   padding-top:5em;
   //border: 1px solid yellow;
+}
+
+.opening-words {
+  padding-left: 0 !important;
+  font-size: 25px;
+  color: grey;
+  text-align: center;
+  padding-top: 2.5em;
 }
 
 .background-perfect {
