@@ -7,13 +7,12 @@ body {
 	justify-content: center;
 }
 
-
 h1 {
 	font-size: 60px;
 	text-align: left;
 /*	margin: 0 0 0 80px;*/
 	color: #2E294E;
-    
+
 }
 
 h3 {
@@ -34,13 +33,21 @@ h3 {
 	margin-top: 30px;
 	background-color: #FFA2A2;
 	color: white;
-	border: none;
+  border: none;
 	border-radius: 20px;
 	padding: 10px 30px 10px 30px;
 	a {
 		text-decoration: none;
 		color: white;
 	}
+}
+
+#play-now:hover {
+  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
+  a {
+    color: #2E294E;
+    font-weight: 600;
+  }
 }
 
 .landing-container {
