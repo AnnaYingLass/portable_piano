@@ -8,43 +8,87 @@ const changeSideBar = (color) => {
   }
 }
 
+const changeHomeColor = (color) => {
+  const homeButton = document.querySelector(".home-btn")
+  if (color === "white"){
+    homeButton.classList.add("text-white")
+  } else{
+    homeButton.classList.remove("text-white")
+  }
+}
+
 const setColorMajor = (body) => {
   body.classList.add("background-major");
   changeSideBar('white');
+  changeHomeColor("white");
 }
 const removeColorMajor = (body) => {
   body.classList.remove("background-major");
   changeSideBar('original');
+  changeHomeColor("original");
+
 }
 const setColorMinor = (body) => {
   body.classList.add("background-minor");
   changeSideBar('white');
+  changeHomeColor("white");
 }
 const removeColorMinor = (body) => {
   body.classList.remove("background-minor");
   changeSideBar('original');
+  changeHomeColor("original");
 }
 const setColorPerfect = (body) => {
   body.classList.add("background-perfect");
   changeSideBar('white');
+  changeHomeColor("white");
 }
 const removeColorPerfect = (body) => {
   body.classList.remove("background-perfect");
   changeSideBar('original');
+  changeHomeColor("original");
 }
 const setColorTritone = (body) => {
   body.classList.add("background-tritone");
   changeSideBar('white');
+  changeHomeColor("white");
 }
 const removeColorTritone = (body) => {
   body.classList.remove("background-tritone");
   changeSideBar('original');
+  changeHomeColor("original");
 }
+
+const setColorPurple = (body) => {
+  body.classList.add("background-purple");
+  changeSideBar('white');
+  changeHomeColor("white");
+}
+
+const removeColorPurple = (body) => {
+  body.classList.remove("background-purple");
+  changeSideBar('original');
+  changeHomeColor("original");
+}
+
+const setColorGreen = (body) => {
+  body.classList.add("background-green");
+  changeSideBar('white');
+  changeHomeColor("white");
+}
+
+const removeColorGreen = (body) => {
+  body.classList.remove("background-green");
+  changeSideBar('original');
+  changeHomeColor("original");
+}
+
 
 const changeColor = () => {
   //console.log(`about to change color: ${window.location.pathname}`);
   if (window.location.pathname == '/home'){
     const body = document.querySelector("body")
+    // const home_button = document.querySelector("#home");
     const minor_2nd = document.querySelector("#minor_2nd");
     const major_2nd = document.querySelector("#major_2nd");
     const minor_3rd = document.querySelector("#minor_3rd");
@@ -107,18 +151,17 @@ const changeColor = () => {
     minor_triad.addEventListener("mouseover", () => setColorMinor(body));
     minor_triad.addEventListener("mouseleave", () => removeColorMinor(body));
 
-    [diminished_triad, augmented_triad, tritone].forEach((chord)=> {
-      chord.addEventListener("mouseover", () => setColorTritone(body));
-      chord.addEventListener("mouseleave", () => removeColorTritone(body));
-    });
+    diminished_triad.addEventListener("mouseover", () => setColorPurple(body));
+    diminished_triad.addEventListener("mouseleave", () => removeColorPurple(body));
+
+    augmented_triad.addEventListener("mouseover", () => setColorGreen(body));
+    augmented_triad.addEventListener("mouseleave", () => removeColorGreen(body));
+
+    tritone.addEventListener("mouseover", () => setColorTritone(body));
+    tritone.addEventListener("mouseleave", () => removeColorTritone(body));
 
     dominant_7th_chord.addEventListener("mouseover", () => setColorPerfect(body));
     dominant_7th_chord.addEventListener("mouseleave", () => removeColorPerfect(body));
-
-
-
-    // tritone.addEventListener("mouseover", () => setColorTritone(body));
-    // tritone.addEventListener("mouseleave", () => removeColorTritone(body));
 
   };
 }
