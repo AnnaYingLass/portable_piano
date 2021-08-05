@@ -139,7 +139,7 @@ const dispatchChord = (number) => {
     case '/tritone': playChord(tritone(root)); break;
     case '/dominant_7th_chord':
     playChord(dominant_7th_chord(root));
-    setTimeout(()=> {playChord(firstInversion_7th(dominant_7th_chord(root)));}, 1000);
+    //setTimeout(()=> {playChord(firstInversion_7th(dominant_7th_chord(root)));}, 1000);
     break;
   }
 }
