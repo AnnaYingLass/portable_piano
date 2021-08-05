@@ -17,70 +17,91 @@ const changeHomeColor = (color) => {
   }
 }
 
+const changeGuidingColor = (color) => {
+  const guiding = document.querySelector(".guiding")
+  if (color === "white"){
+    guiding.classList.add("text-white")
+  } else{
+    guiding.classList.remove("text-white")
+  }
+}
+
 const setColorMajor = (body) => {
   body.classList.add("background-major");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 const removeColorMajor = (body) => {
   body.classList.remove("background-major");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 
 }
 const setColorMinor = (body) => {
   body.classList.add("background-minor");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 const removeColorMinor = (body) => {
   body.classList.remove("background-minor");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 }
 const setColorPerfect = (body) => {
   body.classList.add("background-perfect");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 const removeColorPerfect = (body) => {
   body.classList.remove("background-perfect");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 }
 const setColorTritone = (body) => {
   body.classList.add("background-tritone");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 const removeColorTritone = (body) => {
   body.classList.remove("background-tritone");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 }
 
 const setColorPurple = (body) => {
   body.classList.add("background-purple");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 
 const removeColorPurple = (body) => {
   body.classList.remove("background-purple");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 }
 
 const setColorGreen = (body) => {
   body.classList.add("background-green");
   changeSideBar('white');
   changeHomeColor("white");
+  changeGuidingColor("white");
 }
 
 const removeColorGreen = (body) => {
   body.classList.remove("background-green");
   changeSideBar('original');
   changeHomeColor("original");
+  changeGuidingColor("original");
 }
 
 
