@@ -1,5 +1,4 @@
-// displayInversion
-
+// display inversion
 const displayInversion = () => {
 
   if (window.location.pathname == '/major_triad' || '/minor_triad' || '/diminished_triad' || '/augmented_triad') {
