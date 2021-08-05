@@ -1,0 +1,22 @@
+<div class='overall-container'>
+  <%= render 'shared/vertical_bar' %>
+  <div class="box">
+    <div class="opening-words">
+      <div class="wave">👋 👋 👋</div>
+      <div class="guiding">✨ Feeling like composing ✨</div>
+      <div class="compose-CRUD">
+        <div class="choice-btn" id="compose-create"><%= link_to "Compose a theme", compose_path %></div>
+        <div class="choice-btn" id="compose-update"><%= link_to "Edit a theme", compose_path %></div>
+        <div class="choice-btn" id="compose-delete"><%= link_to "Delete a theme", compose_path %></div>
+        <div class="choice-btn" id="compose-read"><%= link_to "View my themes", compose_path %></div>
+      </div>
+
+    </div>
+    <%= render 'shared/piano' %>
+  </div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
