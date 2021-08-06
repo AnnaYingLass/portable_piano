@@ -20,4 +20,4 @@ const showNotes = () => {
   }
 
 
-export { displayInversion }
+export { showNotes }
