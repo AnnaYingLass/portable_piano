@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_064639) do
+ActiveRecord::Schema.define(version: 2021_08_05_175632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,4 +22,22 @@ ActiveRecord::Schema.define(version: 2021_07_28_064639) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "theme_notes", force: :cascade do |t|
+    t.bigint "theme_id"
+    t.bigint "note_id"
+    t.integer "rank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_theme_notes_on_note_id"
+    t.index ["theme_id"], name: "index_theme_notes_on_theme_id"
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "theme_notes", "notes"
+  add_foreign_key "theme_notes", "themes"
 end
