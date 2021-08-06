@@ -19,10 +19,10 @@ const changeHomeColor = (color) => {
 
 const changeGuidingColor = (color) => {
   const guiding = document.querySelector(".guiding")
-  if (color === "white"){
-    guiding.classList.add("text-white")
+  if (color === "pink"){
+    guiding.classList.add("text-pink")
   } else{
-    guiding.classList.remove("text-white")
+    guiding.classList.remove("text-pink")
   }
 }
 
@@ -30,7 +30,7 @@ const setColorMajor = (body) => {
   body.classList.add("background-major");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 const removeColorMajor = (body) => {
   body.classList.remove("background-major");
@@ -43,7 +43,7 @@ const setColorMinor = (body) => {
   body.classList.add("background-minor");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 const removeColorMinor = (body) => {
   body.classList.remove("background-minor");
@@ -55,7 +55,7 @@ const setColorPerfect = (body) => {
   body.classList.add("background-perfect");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 const removeColorPerfect = (body) => {
   body.classList.remove("background-perfect");
@@ -67,7 +67,7 @@ const setColorTritone = (body) => {
   body.classList.add("background-tritone");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 const removeColorTritone = (body) => {
   body.classList.remove("background-tritone");
@@ -80,7 +80,7 @@ const setColorPurple = (body) => {
   body.classList.add("background-purple");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 
 const removeColorPurple = (body) => {
@@ -94,7 +94,7 @@ const setColorGreen = (body) => {
   body.classList.add("background-green");
   changeSideBar('white');
   changeHomeColor("white");
-  changeGuidingColor("white");
+  changeGuidingColor("pink");
 }
 
 const removeColorGreen = (body) => {

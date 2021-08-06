@@ -12,6 +12,11 @@ body {
 .guiding {
   color: #E93B81;
   font-weight: 500;
+  text-align: center;
+}
+
+.wave {
+  text-align: center;
 }
 
 .overall-container {
@@ -27,12 +32,16 @@ body {
 }
 
 .opening-words {
-  padding-left: 0 !important;
+  background-color: #F9F9F9;
+  margin-left: 300px;
+  width: fit-content;
+  padding: 20px 50px 20px 50px;
   font-size: 25px;
   color: grey;
-  text-align: center;
-  padding-top: 2.5em;
+  margin-top: 2em;
+  border-radius: 15px;
 }
+
 
 .background-perfect {
   background-color: #550006;
@@ -59,8 +68,12 @@ body {
 }
 
 .text-white {
-  color: white;
+  /*color: white;*/
   a {
     color: white;
   }
+}
+
+.text-pink {
+  color: #E93B81;
 }
