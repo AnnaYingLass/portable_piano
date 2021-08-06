@@ -29,25 +29,24 @@ const AUDIO_FILES = {
 }
 
 
+
+
+
 const themeHear = () => {
    if (window.location.pathname == '/index') {
-      console.log("I am about to hear the newest");
-      // goes to  harmonies#construct_major_chord using this fetch method
-      const url = '/latest'
-      // my params[:number] gets triggered
+    const play_btn = document.getElementById("ting-btn")
+    play_btn.addEventListener("click", () => {
 
+      const url = '/latest'
       // fetch(`${url}?name=${name}`)
       fetch(`${url}`)
         .then(response => response.json())
         .then((data) => {
-          // data is the json represtaation of @results (the array I returned by controller)
           console.log("data: ",data);
           const interval = 500;
           data.forEach((datum, index)  =>{
             console.log(datum.name);
             const noteName = datum.name;
-            // const verify = document.getElementById('view-theme');
-            // verify.insertAdajcentHTML('beforeend', `<div class="verify-note">${noteName}</div>`);
             setTimeout(() => {
               console.log("PAUSE");
               playNote(noteName);
@@ -55,6 +54,8 @@ const themeHear = () => {
           });
 
         })
+      });
+
   }
 }
 

@@ -27,8 +27,12 @@ class CompositionsController < ApplicationController
 
 
   def latest
-    @newest = Theme.last.notes
-    render json: @newest
+    unless Theme.last.nil?
+      @newest = Theme.last.notes
+      render json: @newest
+    else
+      render json: {}
+    end
   end
 
   def index
