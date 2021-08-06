@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get 'composing_mode', to: "compositions#composing_mode", as: 'composing_mode'
   get 'compose', to: "compositions#compose", as: 'compose'
   post 'compose', to: "compositions#save_compose", as: 'save_compose'
-  # get 'all', to: "compositions#all", as:'all'
+  #latest is for ajax only
+  get 'latest', to:"compositions#latest", as: 'latest'
+  get 'index', to: "compositions#index", as: 'index'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
   get 'home', to: "pages#home", as: 'home'
   get 'minor_2nd', to: "harmonies#minor_2nd", as: 'minor_2nd'
