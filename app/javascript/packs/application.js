@@ -31,7 +31,13 @@ import { playNotes } from '../scripts/play-note.js'
 import {  changeColor } from '../scripts/changecolor.js'
 import {  popUp } from '../scripts/popup.js'
 import {  displayInversion } from '../scripts/display-inversion.js'
+
 // import { showNotes } from '../scripts/show-notes.js'
+
+import {  themeCompose } from '../scripts/theme-compose.js'
+import {  themeHear } from '../scripts/theme-hear.js'
+
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -43,5 +49,10 @@ document.addEventListener('turbolinks:load', () => {
   changeColor();
   // popUp();
   displayInversion();
+
   // showNotes();
+
+  themeCompose();
+  themeHear();
+
 });
