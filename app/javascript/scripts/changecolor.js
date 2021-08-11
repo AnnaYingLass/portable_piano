@@ -1,6 +1,6 @@
 //console.log("changeColor")
 const changeSideBar = (color) => {
-  const sideBar = document.querySelector(".scroll-part")
+  const sideBar = document.querySelector(".scroll")
   if (color === "white"){
     sideBar.classList.add("text-white")
   } else {

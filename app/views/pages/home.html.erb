@@ -1,18 +1,20 @@
 <script aync src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <div class='overall-container'>
   <%= render 'shared/vertical_bar' %>
-  <div class="box">
-    <div class="opening-words">
-      <div class="wave">👋 👋 👋</div>
-      <div class="guiding">✨ Strike a few notes ✨<br>
+  <div id="right-half">
+    <div class="center-box">
+      <div class="welcoming-words">
+        👋 👋 👋 <br>
+        ✨ Strike a few notes ✨<br>
         Or, choose a chord/interval on the left<br>
-        <%= render 'shared/compose_btn' %>
+        <button class="btn-unicorn" id="compose-btn">
+          <%= link_to "Compose", composing_mode_path %>
+        </button>
       </div>
       <div class="show-notes"></div>
     </div>
     <%= render 'shared/piano' %>
   </div>
-
 </div>
 
 
