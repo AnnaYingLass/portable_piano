@@ -1,17 +1,15 @@
 <%= render 'shared/navbar' %>
 
-<div class='landing-container'>
-	<div class="slogans">
-		<h1>Composer's</h1>
-		<h1>Portable Piano</h1>
-		<h3>Get inspired anytime, anywhere</h3>
-	    <button id="play-now">
-	      <%= link_to "Play Now", home_path %>
-	    </button>
-	</div>
-	<div class="poster-container">
-	 <%= image_tag 'dididi.png', alt: "logo", class: "poster"%>
-	</div>
+<div id='below-navbar'>
+  <div id='left-block'>
+	<div id="titile-big">Composer's <br>
+	Portable Piano</div>
+	<div id='title-small'>Get inspired anytime, anywhere</div>
+    <button class="btn-unicorn">
+      <%= link_to "Play Now", home_path %>
+    </button>
+  </div>
+  <%= image_tag 'landing-page-pic.png', alt: "landing-page-pic", id: "landing-page-pic"%>
 </div>
 
 
