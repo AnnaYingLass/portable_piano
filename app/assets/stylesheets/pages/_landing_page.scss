@@ -2,35 +2,31 @@ body {
 	background-color: white;
 }
 
-.landing-container {
+#below-navbar {
 	align-items: center;
 	justify-content: center;
+	display: flex;
 }
 
-h1 {
+#left-block {
+	display: inline-block;
+	text-align: left;
+	margin-right: 100px;
+}
+
+#titile-big {
 	font-size: 60px;
-	text-align: left;
-/*	margin: 0 0 0 80px;*/
 	color: #2E294E;
-
 }
 
-h3 {
+#title-small {
 	font-size: 20px;
-	text-align: left;
-/*	margin-left: 50px;*/
-	margin-top: 30px;
 	color: #737070;
+	margin-bottom: 25px;
 }
 
-.slogans {
-	width: 500px;
-}
-
-#play-now {
+.btn-unicorn {
 	font-size: 20px;
-/*	margin-left: 50px;*/
-	margin-top: 30px;
 	background-color: #FFA2A2;
 	color: white;
   border: none;
@@ -42,7 +38,7 @@ h3 {
 	}
 }
 
-#play-now:hover {
+.btn-unicorn:hover {
   background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
   a {
     color: #2E294E;
@@ -50,17 +46,10 @@ h3 {
   }
 }
 
-.landing-container {
-	display: flex;
-}
-
-.poster-container {
+#landing-page-pic {
+	border-radius: 20px;
 	width: 500px;
 	height: 500px;
 	margin-top: 3em;
 	align-items: flex-start;
-}
-
-.poster {
-	border-radius: 20px;
 }

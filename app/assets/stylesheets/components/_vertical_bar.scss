@@ -1,47 +1,28 @@
 .vertical-bar {
-  padding-top: 2em;
-  padding-left: 3em;
-/*  padding-right: 3em;*/
-  width: 350px;
+  padding-left: 3.5em;
+  width: 300px;
   font-size: 18px;
 }
 
-// .home-btn {
-
-//   a {
-//     color: #2E294E;
-//     text-decoration: none;
-//     font-size: 20px;
-//     font-weight:bold;
-//     width: fit-content;
-//     transition: background 1000ms ease 0s;
-//     margin-left: 20px;
-//     margin-top: 50px;
-//   }
-// }
-
-#home {
-  font-size: 20px;
-/*  margin-left: 50px;*/
-  margin-top: 30px;
-  background-color: #FFBCBC;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 30px 10px 30px;
-  a {
-    text-decoration: none;
-    color: white;
-
-  }
+.scroll {
+  margin-top: 10px;
+  height: 600px;
+  overflow-y: scroll;
 }
 
-#home:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #4C4C6D;
-    font-weight: 500;
-  }
+// to make scroll work on different browsers
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.choice-btn {
+  padding-top: 20px;
+  padding-right: 15px;
 }
 
 .choice-btn a {
@@ -55,31 +36,4 @@
     transition: .5s;
   }
 }
-
-.choice-btn {
-  padding-top: 20px;
-  padding-right: 15px;
-
-}
-
-.scroll-part {
-/*  border-top: 1px solid #F4F4F4;
-  border-bottom: 1px solid #F4F4F4;*/
-  margin-top: 40px;
-  width: 200px;
-  height: 600px;
-  overflow-y: scroll;
-}
-
-// below 2 for different web browsers
-.scroll-part::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-part {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-
 

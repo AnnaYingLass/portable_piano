@@ -1,48 +1,42 @@
- /*Specific CSS for your home-page*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   background-color: #F9F9F9;
-  margin: 0;
   transition: all 200ms;
 }
 
-.guiding {
+.overall-container {
+  display: flex;
+  margin-top: 50px;
+}
+
+#right-half {
+  display: inline-block;;
+}
+
+.welcoming-words {
   color: #E93B81;
   font-weight: 500;
   text-align: center;
 }
 
-.wave {
-  text-align: center;
-}
-
-.overall-container {
-  display: flex;
-}
-
-.box {
-  width:100%; //same as piano
-  height:500px;
-  padding-top:5em;
-  padding-left: 0 !important;
-  //border: 1px solid yellow;
-}
-
-.opening-words {
+.center-box {
   background-color: #F9F3F3;
   margin-left: 200px;
   width: fit-content;
   padding: 20px 50px 20px 50px;
   font-size: 25px;
   color: grey;
-  margin-top: 1em;
   border-radius: 15px;
   box-shadow: 0px 0px 5px #F9F9F9;
+  height:250px;
 }
 
+#compose-btn {
+  margin-top: 20px;
+}
 
 .background-perfect {
   background-color: #550006;
@@ -69,7 +63,6 @@ body {
 }
 
 .text-white {
-  /*color: white;*/
   a {
     color: white;
   }
