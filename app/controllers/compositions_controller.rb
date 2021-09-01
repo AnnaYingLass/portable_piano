@@ -36,6 +36,8 @@ class CompositionsController < ApplicationController
   end
 
   def index
+    @all_themes = Theme.all.map { |theme| theme.notes }
+    render json: @all_themes
   end
 
 end
