@@ -20,20 +20,4 @@
   scrollbar-width: none;
 }
 
-.choice-btn {
-  padding-top: 20px;
-  padding-right: 15px;
-}
-
-.choice-btn a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #4C4C6D;
-  width: fit-content;
-  transition: background 1000ms ease 0s;
-    &:hover {
-    border-bottom: rgba(200, 200, 200, 0.5) 1px solid;
-    transition: .5s;
-  }
-}
 

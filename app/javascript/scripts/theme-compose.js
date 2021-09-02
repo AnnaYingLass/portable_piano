@@ -15,7 +15,7 @@ const themeCompose = () => {
       tmp_records.forEach((tmp_record)=> tmp_record.remove());
     });
 
-    const done_btn = document.getElementById('theme-done')
+    const done_btn = document.getElementById('done')
     done_btn.addEventListener('click', () => {
       console.log({my_theme});
 
