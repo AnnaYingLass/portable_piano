@@ -2,15 +2,13 @@
 <div class='overall-container'>
   <%= render 'shared/vertical_bar' %>
   <div id="right-half">
-    <div class="center-box">
+    <div class="box-pink">
       <div class="welcoming-words">
         👋 👋 👋 <br>
         ✨ Strike a few notes ✨<br>
         Or, choose a chord/interval on the left<br>
-        <button class="btn-unicorn" id="compose-btn">
-          <%= link_to "Compose", composing_mode_path %>
-        </button>
       </div>
+      <button class="btn-unicorn" id="compose-btn"><%= link_to "Compose", composing_mode_path %></button>
       <div class="show-notes"></div>
     </div>
     <%= render 'shared/piano' %>

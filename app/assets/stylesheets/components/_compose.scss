@@ -1,116 +1,3 @@
-#compose {
-  font-size: 20px;
-/*  margin-left: 50px;*/
-  margin-top: 30px;
-  background-color: #FFBCBC;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 30px 10px 30px;
-  a {
-    text-decoration: none;
-    color: white;
-
-  }
-}
-
-#compose:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #4C4C6D;
-    font-weight: 500;
-  }
-}
-
-
-#start-save {
-  font-size: 20px;
-/*  margin-left: 50px;*/
-  margin-top: 30px;
-  margin-right: 20px;
-  background-color: #FFBCBC;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px 5px 10px;
-  a {
-    text-decoration: none;
-    color: white;
-
-  }
-}
-
-#start-save:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #4C4C6D;
-    font-weight: 500;
-  }
-}
-
-#restart {
-  font-size: 20px;
-/*  margin-left: 50px;*/
-  margin-top: 30px;
-  background-color: #FFBCBC;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  margin-right: 20px;
-  padding: 10px 10px 10px 10px;
-  a {
-    text-decoration: none;
-    color: white;
-
-  }
-}
-
-#restart:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #4C4C6D;
-    font-weight: 500;
-  }
-}
-
-
-.compose-CRUD {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.compose-CRUD div {
-  margin-top: 20px;
-  font-size: 40px;
-  padding:15px;
-  font-weight: 500;
-}
-
-#theme-done {
-  font-size: 20px;
-/*  margin-left: 50px;*/
-  margin-top: 30px;
-  background-color: #FFBCBC;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 10px 10px 10px;
-  a {
-    text-decoration: none;
-    color: white;
-
-  }
-}
-
-#theme-done:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #4C4C6D;
-    font-weight: 500;
-  }
-}
-
-
 .my-record {
   display: flex;
 }
@@ -120,4 +7,8 @@
   font-size: 30px;
   padding-top: 20px;
   padding-right: 20px;
+}
+
+#ting{
+  text-align: left;
 }

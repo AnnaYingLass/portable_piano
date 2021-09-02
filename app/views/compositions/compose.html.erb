@@ -1,33 +1,17 @@
+<script aync src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <div class='overall-container'>
   <%= render 'shared/vertical_bar' %>
-  <div class="box">
-    <div class="opening-words">
-      <div class="wave">👋 👋 👋</div>
-      <div class="guiding">✨ Feeling like composing ✨</div>
-        <!-- <h5>New Piece 😇</h5>
- -->
-      <div class="compose-CRUD">
-        <button class="home-btn" id="start-save">
-              Start to store
-        </button>
-
-        <button class="home-btn" id="restart">
-              Restart
-        </button>
-
-        <button class="home-btn" id="theme-done">
-          I am done!
-        </button>
+  <div id="right-half">
+    <div class="box-pink">
+      <div class="welcoming-words">
+        👋 👋 👋 <br>
+        ✨ Feeling like composing ✨<br>
       </div>
-        </div>
-        <div class="my-record">
-
-
-
+      <button class="btn-unicorn" id="start-save">Start to store</button>
+      <button class="btn-unicorn" id='restart'>Restart</button>
+      <button class="btn-unicorn" id='done'>I am done!</button>
     </div>
+    <div class="my-record"></div>
     <%= render 'shared/piano' %>
   </div>
-
 </div>
-
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>

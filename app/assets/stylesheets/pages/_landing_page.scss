@@ -25,26 +25,6 @@ body {
 	margin-bottom: 25px;
 }
 
-.btn-unicorn {
-	font-size: 20px;
-	background-color: #FFA2A2;
-	color: white;
-  border: none;
-	border-radius: 20px;
-	padding: 10px 30px 10px 30px;
-	a {
-		text-decoration: none;
-		color: white;
-	}
-}
-
-.btn-unicorn:hover {
-  background-image: linear-gradient(90deg, #B5EAEA 0%, #FFE194 49%, #FFBCBC 80%, #B5EAEA 100%);
-  a {
-    color: #2E294E;
-    font-weight: 600;
-  }
-}
 
 #landing-page-pic {
 	border-radius: 20px;
