@@ -17,7 +17,7 @@ const displayInversion = () => {
     if (keys.length) {
       keys.forEach(key => {
         key.addEventListener('click', ( ) => {
-          console.log("display inversion NOW:", display);
+          console.log("display inversion now:", display);
           display.insertAdjacentHTML('beforeend', '<div class="position">root position</div>');
           setTimeout(()=> {
             display.insertAdjacentHTML('beforeend', '<div class="position">1st inversion</div>');
@@ -33,6 +33,19 @@ const displayInversion = () => {
 
       })
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 
   // if (window.location.pathname == '/dominant_7th_chord') {

@@ -1,9 +1,7 @@
-// display inversion
 var my_theme = [];
 
 const themeCompose = () => {
   if (window.location.pathname == '/compose') {
-
 
     const start_btn = document.getElementById('start-save')
     start_btn.addEventListener('click', () => startToStore());
