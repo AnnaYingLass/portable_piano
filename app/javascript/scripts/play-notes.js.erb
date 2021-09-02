@@ -1,7 +1,6 @@
 const WHITE_KEYS = ['q', 'w', 'e', 'r', 't', 'y', 'u','i', 'o', 'p', 'z', 'x', 'c', 'v', 'b']
 const BLACK_KEYS = ['2', '3', '5', '6', '7','9', '0', 's', 'd', 'f']
 <% helpers = ActionController::Base.helpers %>
-
 const AUDIO_FILES = {
   "C3": "<%= helpers.audio_url 'audios/1-C3.m4a' %>",
   "Db3": "<%= helpers.audio_url 'audios/2-Db3.m4a' %>",
@@ -31,11 +30,6 @@ const AUDIO_FILES = {
   "C5": "<%= helpers.audio_url 'audios/25-C5.m4a' %>"
 }
 
-// const playNotes = () => {
-//   const key = selectKeys();
-//   playNote(key);
-//   dispatchChord(key);
-// }
 
 
 // listens to the 'click' or 'keydown', then triggers the playNote function fot it,
@@ -46,6 +40,13 @@ const AUDIO_FILES = {
   const keys = document.querySelectorAll('.key')
   const whiteKeys = document.querySelectorAll('.key.white')
   const blackKeys = document.querySelectorAll('.key.black')
+  // console.log(keys); //gives an array of 25 keys
+  // console.log(whiteKeys); //gives an array of 15 whitekeys
+
+  console.log(keys.length) // gives 25
+  console.log(whiteKeys.length) //gives 15
+  console.log(blackKeys.length) //gives 10
+
   // add event listener of type 'click' for each one fo the 24 keys
   // and then triggers the playNote function on that key
   if (keys.length) {
@@ -61,15 +62,17 @@ const AUDIO_FILES = {
   if(whiteKeys.length && blackKeys.length) {
     document.addEventListener('keydown', (e) => {
       if (e.repeat) return
+      // 'e' is the keydown event
+      // e.key gives 'q' if you pressed 'q' on the labtop
       const whiteKeyIndex = WHITE_KEYS.indexOf(e.key)
       const blackKeyIndex = BLACK_KEYS.indexOf(e.key);
-      if (whiteKeyIndex > -1) {
-        playNote(whiteKeys[whiteKeyIndex]);
-        dispatchChord(whiteKeys[whiteKeyIndex].dataset.number);
-      };
-      if (blackKeyIndex > -1) {
-        playNote(blackKeys[blackKeyIndex]);
-        dispatchChord(blackKeys[blackKeyIndex].dataset.number);
+      // either gives the key ot says 'undefined'
+      // console.log(whiteKeys[whiteKeyIndex])
+      // console.log(blackKeys[blackKeyIndex])1
+      if (whiteKeyIndex > -1 || blackKeyIndex > -1) {
+        const key = whiteKeys[whiteKeyIndex] || blackKeys[blackKeyIndex];
+        playNote(key);
+        dispatchChord(key.dataset.number);
       };
     })
   }
