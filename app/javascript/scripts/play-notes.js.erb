@@ -31,12 +31,22 @@ const AUDIO_FILES = {
 }
 
 
-// listens to the 'click' or 'keydown', then triggers the playNote function fot it, then dispatch chord if needed
+
+// listens to the 'click' or 'keydown', then triggers the playNote function fot it,
+// and dispatches chord only if needed
  const playNotes = () => {
-  // keys are all the 24 keys (selected class = 'key')
+  // keys are all the 25 keys (class="key") from _piano.html.erb
+  // each key has data-note and data-number
   const keys = document.querySelectorAll('.key')
   const whiteKeys = document.querySelectorAll('.key.white')
   const blackKeys = document.querySelectorAll('.key.black')
+  // console.log(keys); //gives an array of 25 keys
+  // console.log(whiteKeys); //gives an array of 15 whitekeys
+
+  console.log(keys.length) // gives 25
+  console.log(whiteKeys.length) //gives 15
+  console.log(blackKeys.length) //gives 10
+
   // add event listener of type 'click' for each one fo the 24 keys
   // and then triggers the playNote function on that key
   if (keys.length) {
@@ -52,36 +62,38 @@ const AUDIO_FILES = {
   if(whiteKeys.length && blackKeys.length) {
     document.addEventListener('keydown', (e) => {
       if (e.repeat) return
-      const key = e.key
-      const whiteKeyIndex = WHITE_KEYS.indexOf(key)
-      const blackKeyIndex = BLACK_KEYS.indexOf(key);
-      if (whiteKeyIndex > -1) {
-        playNote(whiteKeys[whiteKeyIndex]);
-        dispatchChord(whiteKeys[whiteKeyIndex].dataset.number);
-      };
-      if (blackKeyIndex > -1) {
-        playNote(blackKeys[blackKeyIndex]);
-        dispatchChord(blackKeys[blackKeyIndex].dataset.number);
+      // 'e' is the keydown event
+      // e.key gives 'q' if you pressed 'q' on the labtop
+      const whiteKeyIndex = WHITE_KEYS.indexOf(e.key)
+      const blackKeyIndex = BLACK_KEYS.indexOf(e.key);
+      // either gives the key ot says 'undefined'
+      // console.log(whiteKeys[whiteKeyIndex])
+      // console.log(blackKeys[blackKeyIndex])1
+      if (whiteKeyIndex > -1 || blackKeyIndex > -1) {
+        const key = whiteKeys[whiteKeyIndex] || blackKeys[blackKeyIndex];
+        playNote(key);
+        dispatchChord(key.dataset.number);
       };
     })
   }
 
 };
 
-// play the selected key(s)
+//playNote triggers the audio file directly
 const playNote = (key) => {
-  //console.log('this key is pressed:', key.dataset.note);
-  // const noteAudio = document.getElementById(key.dataset.note);
+  // console.log('this key is pressed:', key.dataset.note);
   const file = AUDIO_FILES[key.dataset.note]
-  // console.log({file})
+  // old way: const noteAudio = document.getElementById(key.dataset.note);
+  // new way: create it amd remove it
   const noteAudio = document.createElement('audio')
   noteAudio.src = file
-  // console.log('audio src', noteAudio.src)
+  // console.log({noteAudio.src})
   noteAudio.type = "audio/mpeg"
   // current Time = 0 sets the 'restart' to the beginnning (t = 0s) of the file
   // so if I press a key repeatedly very fast, I don't have to wait until the end of the file
   noteAudio.currentTime = 0
   noteAudio.play();
+  // 'active' adds animation
   key.classList.add('active');
   const audios = document.querySelectorAll('audio')
   //remove the media element this way, otherwise says 'blocked / reached limit'
@@ -99,7 +111,7 @@ const playNote = (key) => {
 const dispatchChord = (number) => {
   console.log(window.location.pathname)
   let path = window.location.pathname;
-  // e,g, number is 1 if C3, but this number is a string!
+  // e,g, number is "1" if C3, but this number is a string!
   const root = Number.parseInt(number);
   switch(path){
     //intervals
@@ -174,23 +186,23 @@ const tritone = (root) => [root, root+6];
 const dominant_7th_chord = (root) => [root, root+4, root+7, root+10];
 
 //within a scale
-const firstInversion = (chord) => {
-    console.log("first inversion:",[chord[1],chord[2],chord[0]+12]);
-    return [chord[1],chord[2],chord[0]+12];
-}
-
-const secondInversion =  (chord) => {
-    console.log("second inversion:",[chord[2],chord[0]+12,chord[1]+12]);
-    return [chord[2],chord[0]+12, chord[1]+12];
-}
+const firstInversion = (chord) => [chord[1],chord[2],chord[0]+12];
+const secondInversion =  (chord) => [chord[2],chord[0]+12, chord[1]+12];
 
 const firstInversion_7th = (chord) => [chord[1], chord[2], chord[3], chord[0]+12];
 
 
+export { playNote }
 export { playNotes }
 
 
 
+
+
+
+
+
+// old: using ajax
 // const fetchMajorTriad = (number) => {
 //   console.log(number)
 //   // goes to  harmonies#construct_major_chord using this fetch method

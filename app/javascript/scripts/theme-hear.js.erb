@@ -1,36 +1,4 @@
-<% helpers = ActionController::Base.helpers %>
-const AUDIO_FILES = {
-  "C3": "<%= helpers.audio_url 'audios/1-C3.m4a' %>",
-  "Db3": "<%= helpers.audio_url 'audios/2-Db3.m4a' %>",
-  "D3": "<%= helpers.audio_url 'audios/3-D3.m4a' %>",
-  "Eb3": "<%= helpers.audio_url 'audios/4-Eb3.mp3' %>",
-  "E3": "<%= helpers.audio_url 'audios/5-E3.m4a' %>",
-  "F3": "<%= helpers.audio_url 'audios/6-F3.m4a' %>",
-  "Gb3": "<%= helpers.audio_url 'audios/7-Gb3.m4a' %>",
-  "G3": "<%= helpers.audio_url 'audios/8-G3.m4a' %>",
-  "Ab3": "<%= helpers.audio_url 'audios/9-Ab3.mp3' %>",
-  "A3": "<%= helpers.audio_url 'audios/10-A3.m4a' %>",
-  "Bb3": "<%= helpers.audio_url 'audios/11-Bb3.m4a' %>",
-  "B3": "<%= helpers.audio_url 'audios/12-B3.m4a' %>",
-
-  "C4": "<%= helpers.audio_url 'audios/13-C4.m4a' %>",
-  "Db4": "<%= helpers.audio_url 'audios/14-Db4.m4a' %>",
-  "D4": "<%= helpers.audio_url 'audios/15-D4.m4a' %>",
-  "Eb4": "<%= helpers.audio_url 'audios/16-Eb4.m4a' %>",
-  "E4": "<%= helpers.audio_url 'audios/17-E4.m4a' %>",
-  "F4": "<%= helpers.audio_url 'audios/18-F4.mp3' %>",
-  "Gb4": "<%= helpers.audio_url 'audios/19-Gb4.m4a' %>",
-  "G4": "<%= helpers.audio_url 'audios/20-G4.mp3' %>",
-  "Ab4": "<%= helpers.audio_url 'audios/21-Ab4.m4a' %>",
-  "A4": "<%= helpers.audio_url 'audios/22-A4.mp3' %>",
-  "Bb4": "<%= helpers.audio_url 'audios/23-Bb4.m4a' %>",
-  "B4": "<%= helpers.audio_url 'audios/24-B4.m4a' %>",
-  "C5": "<%= helpers.audio_url 'audios/25-C5.m4a' %>"
-}
-
-
-
-
+import {playNote} from "./play-notes.js"
 
 const themeHear = () => {
    if (window.location.pathname == '/index') {
@@ -49,7 +17,8 @@ const themeHear = () => {
             const noteName = datum.name;
             setTimeout(() => {
               console.log("PAUSE");
-              playNote(noteName);
+              const key = document.querySelector(`[data-note="${noteName}"]`)
+              playNote(key);
             }, index * interval);
           });
 
@@ -59,28 +28,32 @@ const themeHear = () => {
   }
 }
 
-const playNote = (noteName) => {
-  console.log("WE LOVE YOU THEME")
-  const file = AUDIO_FILES[noteName]
-  const noteAudio = document.createElement('audio')
-  noteAudio.src = file
-  noteAudio.type = "audio/mpeg"
-  noteAudio.currentTime = 0
-  noteAudio.play();
-  // key.classList.add('active');
-  const audios = document.querySelectorAll('audio')
-  noteAudio.onended = () => {
-        // noteAudio.currentSrc = null;
-        noteAudio.src = "";
-        noteAudio.srcObject = null;
-        noteAudio.remove();
-    };
-  //setTimeout(() => { key.classList.remove('active') }, 300);
-}
-
 export { themeHear }
 
+// old: copy-pasted code
+// const playNote = (noteName) => {
+//   console.log("WE LOVE YOU THEME")
+//   const file = AUDIO_FILES[noteName]
+//   const noteAudio = document.createElement('audio')
+//   noteAudio.src = file
+//   noteAudio.type = "audio/mpeg"
+//   noteAudio.currentTime = 0
+//   noteAudio.play();
 
+//   // const key = document.querySelector(`[data-note="${noteName}"]`)
+//   // key.classList.add('active');
+//   const audios = document.querySelectorAll('audio')
+//   noteAudio.onended = () => {
+//         // noteAudio.currentSrc = null;
+//         noteAudio.src = "";
+//         noteAudio.srcObject = null;
+//         noteAudio.remove();
+//     };
+//   setTimeout(() => { key.classList.remove('active') }, 300);
+// }
+
+
+//   old: from Vivien
 //        data.forEach(note => {
 //           const audio = document.getElementById(note.name)
 //           audio.currentTime = 0

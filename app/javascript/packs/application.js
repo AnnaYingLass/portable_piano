@@ -27,15 +27,14 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { playNotes } from '../scripts/play-note.js'
-import {  changeColor } from '../scripts/changecolor.js'
-import {  popUp } from '../scripts/popup.js'
-import {  displayInversion } from '../scripts/display-inversion.js'
 
-// import { showNotes } from '../scripts/show-notes.js'
+import { playNotes } from '../scripts/play-notes.js'
+import { changeColor } from '../scripts/changecolor.js'
+import { popUp } from '../scripts/popup.js'
+import { displayInversion } from '../scripts/display-inversion.js'
+import { themeCompose } from '../scripts/theme-compose.js'
+import { themeHear } from '../scripts/theme-hear.js'
 
-import {  themeCompose } from '../scripts/theme-compose.js'
-import {  themeHear } from '../scripts/theme-hear.js'
 
 
 
@@ -45,13 +44,11 @@ document.addEventListener('turbolinks:load', () => {
   const audios = document.querySelectorAll('audio')
   // console.log({audios})
   // console.log('count audio', audios.length)
+
   playNotes();
   changeColor();
   // popUp();
   displayInversion();
-
-  // showNotes();
-
   themeCompose();
   themeHear();
 

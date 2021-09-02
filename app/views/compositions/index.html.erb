@@ -11,11 +11,11 @@
         Let's hear your <em>latest</em> theme 🎵:<br>
         <button id="ting-btn">PLAY</button>
       </div>
-<!--
-      <div id='view-theme'>
-        Or, view all your themes 🙌:
-         <button id="view-btn">VIEW</button>
-      </div> -->
+
+      <div class="choice-btn">
+        <%= link_to "Or, view all your themes 🙌:", compose_path %>
+      </div>
+
     </div>
     <div class="my-record"></div>
     <%= render 'shared/piano' %>
