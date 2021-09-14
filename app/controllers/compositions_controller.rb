@@ -26,7 +26,7 @@ class CompositionsController < ApplicationController
   end
 
 
-  def latest
+  def latest_api
     unless Theme.last.nil?
       @newest = Theme.last.notes
       render json: @newest
@@ -38,6 +38,10 @@ class CompositionsController < ApplicationController
   def index
     # @all_themes = Theme.all.map { |theme| theme.notes }
     # render json: @all_themes
+  end
+
+  def index_all
+    @themes = Theme.all
   end
 
 end

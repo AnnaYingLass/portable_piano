@@ -5,7 +5,7 @@ const themeHear = () => {
     const play_btn = document.getElementById("ting-btn")
     play_btn.addEventListener("click", () => {
 
-      const url = '/latest'
+      const url = '/latest_api'
       // fetch(`${url}?name=${name}`)
       fetch(`${url}`)
         .then(response => response.json())

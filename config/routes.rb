@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get 'compose', to: "compositions#compose", as: 'compose'
   post 'compose', to: "compositions#save_compose", as: 'save_compose'
   #latest is for ajax only
-  get 'latest', to:"compositions#latest", as: 'latest'
+  get 'latest_api', to:"compositions#latest_api", as: 'latest_api'
   get 'index', to: "compositions#index", as: 'index'
+  get 'index_all', to: "compositions#index_all", as: 'index_all'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
   get 'home', to: "pages#home", as: 'home'
